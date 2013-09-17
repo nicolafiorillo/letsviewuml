@@ -85,6 +85,9 @@ static const CGFloat minVersion = 11.0f;
 		
 		[canvas.elements addObject:e];
 	}
+
+	for (SMXMLElement *group in [diagram childrenNamed:@"group"])
+		[self loadElementsFromParent:group inCanvas:canvas];
 }
 
 @end

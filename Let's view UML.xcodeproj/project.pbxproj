@@ -59,6 +59,7 @@
 		97F0130517D6423D006E15D9 /* UIViewController+BackgrounderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0130417D6423D006E15D9 /* UIViewController+BackgrounderViewController.m */; };
 		97F0F06B17868D3500CAA6C3 /* PackageElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0F06A17868D3500CAA6C3 /* PackageElementView.m */; };
 		97F0F06E17868E2700CAA6C3 /* ElementViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0F06D17868E2700CAA6C3 /* ElementViewFactory.m */; };
+		97F3D3A317E8217000159844 /* FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3D3A217E8217000159844 /* FileSystem.m */; };
 		97F9754B178096A900EC90BE /* TextElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F9754A178096A900EC90BE /* TextElementView.m */; };
 		97F9754E17809A0A00EC90BE /* NoteElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F9754D17809A0A00EC90BE /* NoteElementView.m */; };
 		97FAE0E21795A43B00A42264 /* CanvasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FAE0E11795A43B00A42264 /* CanvasCollectionViewController.m */; };
@@ -157,6 +158,8 @@
 		97F2F90217DEE6B200DCB3F7 /* ConstStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstStrings.h; sourceTree = "<group>"; };
 		97F2F90317DEE96300DCB3F7 /* ExternalKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalKeys.h; sourceTree = "<group>"; };
 		97F2F90417DEEA9A00DCB3F7 /* Let's view UML-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Let's view UML-Prefix.pch"; sourceTree = "<group>"; };
+		97F3D3A117E8217000159844 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
+		97F3D3A217E8217000159844 /* FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystem.m; sourceTree = "<group>"; };
 		97F97549178096A900EC90BE /* TextElementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextElementView.h; sourceTree = "<group>"; };
 		97F9754A178096A900EC90BE /* TextElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextElementView.m; sourceTree = "<group>"; };
 		97F9754C17809A0A00EC90BE /* NoteElementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteElementView.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				97E239B117DE33C50019AAA8 /* InfoViewController.m */,
 				975905A317E25FF40098AD3D /* WelcomeCanvas.h */,
 				975905A417E25FF40098AD3D /* WelcomeCanvas.m */,
+				97F3D3A117E8217000159844 /* FileSystem.h */,
+				97F3D3A217E8217000159844 /* FileSystem.m */,
 			);
 			name = "Let's view UML";
 			path = iUMLet;
@@ -477,6 +482,7 @@
 				97E5222F17E2DB4900F941D0 /* StateElementView.m in Sources */,
 				97E5223217E3732100F941D0 /* InitialStateElementView.m in Sources */,
 				97E5223517E3734600F941D0 /* FinalStateElementView.m in Sources */,
+				97F3D3A317E8217000159844 /* FileSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

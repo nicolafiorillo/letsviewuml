@@ -12,6 +12,8 @@
 
 @property (nonatomic)BOOL showGrid;
 
+- (BOOL)firstTimeForVersion:(NSString *)version;
+
 + (Settings *)getInstance;
 
 @end

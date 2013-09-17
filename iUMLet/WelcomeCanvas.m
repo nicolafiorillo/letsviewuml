@@ -7,53 +7,45 @@
 //
 
 #import "WelcomeCanvas.h"
+#import "Settings.h"
+#import "FileSystem.h"
+
+static WelcomeCanvas * _welcomeCanvas = nil;
+static NSString * kWelcomeFileName = @"Welcome";
+static NSString * kWelcomeFileExtension = @"uxf";
 
 @implementation WelcomeCanvas
 
-/*
- NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MyFile" ofType:@"txt"];
- NSData *myData = [NSData dataWithContentsOfFile:filePath];
- if (myData) {
- // do something useful
- }
- 
- 
- // -applicationDidFinishLaunching:
- [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
- // to check it:
- [[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"];
- // -applicationWillTerminate:
- [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
- 
- 
- 
- -(void)awakeFromNib{
++ (WelcomeCanvas *)getInstance
+{
+	if (!_welcomeCanvas)
+		_welcomeCanvas = [WelcomeCanvas new];
 
- NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	return _welcomeCanvas;
+}
 
- BOOL hasRanBefore = [defaults boolForKey:@"hasRanBefore"];
+- (void) generate
+{
+	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+	if ([[Settings getInstance] firstTimeForVersion:version])
+		[self addWelcomeCanvas];
+}
 
- [defaults setBool:YES forKey:@"hasRanBefore"];
+- (void)addWelcomeCanvas
+{
+	NSString *welcomeFileName = [[NSBundle mainBundle] pathForResource:kWelcomeFileName ofType:kWelcomeFileExtension];
+	NSData *welcomeFileData = [NSData dataWithContentsOfFile:welcomeFileName];
+	if (welcomeFileData)
+	{
+		NSString * root = [FileSystem deviceRoot];
 
- [defaults synchronize];
+		NSString * localFilePathName = [root stringByAppendingPathComponent:kWelcomeFileName];
+		localFilePathName = [localFilePathName stringByAppendingPathExtension:kWelcomeFileExtension];
 
-
-
- if (hasRanBefore) {
-
- NSAlert *iRanBefore = [NSAlert alertWithMessageText:@"I Ran Before" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"This application has run before."];
-
- [iRanBefore runModal];
-
- } else {
-
- NSAlert *iDidNotRunBefore = [NSAlert alertWithMessageText:@"I Didn't Run Before" defaultButton:@"OK" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"This application has not been run before."];
-
- [iDidNotRunBefore runModal];
- 
- }
- 
-
- */
+		NSFileManager * manager = [NSFileManager defaultManager];
+		if (manager != nil)
+			[welcomeFileData writeToFile:localFilePathName atomically:NO];
+	}
+}
 
 @end

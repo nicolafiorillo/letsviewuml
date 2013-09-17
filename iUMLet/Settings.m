@@ -38,4 +38,17 @@ static NSString * kGridKey = @"showgrid";
 	[defaults synchronize];
 }
 
+- (BOOL)firstTimeForVersion:(NSString *)version
+{
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSString *versionKey = [NSString stringWithFormat:@"ver_%@", version];
+	
+	if ([defaults objectForKey:versionKey])
+		return NO;
+
+	[defaults setValue:@"runned" forKey:versionKey];
+
+	return YES;
+}
+
 @end

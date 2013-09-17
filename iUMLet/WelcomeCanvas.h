@@ -10,4 +10,8 @@
 
 @interface WelcomeCanvas : NSObject
 
+- (void) generate;
+
++ (WelcomeCanvas *)getInstance;
+
 @end

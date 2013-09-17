@@ -7,26 +7,13 @@
 //
 
 #import "Preview.h"
+#import "FileSystem.h"
 
 @implementation Preview
 
-+ (NSString *)deviceRoot
-{
-	NSSearchPathDirectory source = NSCachesDirectory;
-
-#if TARGET_IPHONE_SIMULATOR
-	source = NSDocumentDirectory;
-#endif
-
-	NSArray * paths = NSSearchPathForDirectoriesInDomains(source, NSUserDomainMask, YES);
-	NSString *root = [paths objectAtIndex:0];
-
-	return root;
-}
-
 + (void)saveForPreview:(Canvas *)canvas image:(UIImage *)image
 {
-	NSString * root = [Preview deviceRoot];
+	NSString * root = [FileSystem deviceRoot];
 
 	NSString * path = [root stringByAppendingPathComponent:[canvas.source stringByAppendingPathComponent:root]];
 	NSString * filepathName = [path stringByAppendingPathComponent:canvas.name];
@@ -45,7 +32,7 @@
 
 + (UIImage *)loadPreview:(Canvas *)canvas
 {
-	NSString * root = [Preview deviceRoot];
+	NSString * root = [FileSystem deviceRoot];
 
 	NSString * path = [root stringByAppendingPathComponent:[canvas.source stringByAppendingPathComponent:root]];
 	NSString * filepathName = [path stringByAppendingPathComponent:canvas.name];

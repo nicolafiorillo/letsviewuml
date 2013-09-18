@@ -355,11 +355,6 @@ CGFloat const kElementViewLineWidth							= 1.0f;
 	CGContextRestoreGState(context);
 }
 
-- (void)drawTextInContext:(CGContextRef)context
-{
-	[self drawTextInContext:context centerVertically:NO centerHorizontally:YES firstLineAt:0.0];
-}
-
 - (void)drawTextVerticallyInContext:(CGContextRef)context
 {
 	[self drawTextInContext:context centerVertically:YES  centerHorizontally:YES firstLineAt:0.0];

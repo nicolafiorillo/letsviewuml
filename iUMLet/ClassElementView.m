@@ -71,7 +71,45 @@ static CGFloat const kClassElementActiveSpace = 8.0f;
 		CGPathRelease(path);
 	}
 
-	[self drawTextInContext:context];
+	[self drawContent:self.boundingRect context:context];
+
+	CGContextRestoreGState(context);
+}
+
+- (void)drawContent:(CGRect)rect context:(CGContextRef)context
+{
+	int yOffset = 0;
+	BOOL centerHorizontally = YES;
+
+	CGContextSaveGState(context);
+	CGContextSetStrokeColorWithColor(context, [self.foregroundColor CGColor]);
+	CGContextSetFillColorWithColor(context, [self.foregroundColor CGColor]);
+
+	for (TextLine * textLine in self.text)
+	{
+		CGFloat rectWidth = CGRectGetWidth(rect);
+		
+		if (textLine.isSeparator)
+		{
+			yOffset += self.fontSeparatorSpace;
+
+			CGContextMoveToPoint(context, 0, yOffset);
+			CGContextAddLineToPoint(context, rectWidth, yOffset);
+			CGContextStrokePath(context);
+
+			centerHorizontally = NO;
+		}
+		else
+		{
+			float x = centerHorizontally ? (rectWidth - textLine.textSize.width) / 2 : self.fontLeftSpace;
+			float y = self.fontSize + self.fontUpperSpace;
+
+			y += yOffset;
+			yOffset = y;
+
+			[self drawText:textLine inContext:context atX:x atY:y];
+		}
+	}
 
 	CGContextRestoreGState(context);
 }

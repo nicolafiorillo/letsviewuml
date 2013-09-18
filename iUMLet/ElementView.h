@@ -48,7 +48,6 @@ static size_t const dashedLengthsSize = sizeof(dashedLengths) / sizeof(float);
 @property (strong, nonatomic)TextLine * p2;
 @property (nonatomic)BOOL activeClass;
 
-- (void)drawTextInContext:(CGContextRef)context;
 - (void)drawTextVerticallyInContext:(CGContextRef)context;
 - (void)drawTextInContext:(CGContextRef)context firstLineAt:(CGFloat)offset;
 - (void)drawLeftJustifiedInContext:(CGContextRef)context;

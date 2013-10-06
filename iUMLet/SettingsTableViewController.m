@@ -26,16 +26,6 @@
 	self.showGridSwitch.on = [Settings getInstance].showGrid;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-	[self.navigationItem setHidesBackButton:YES animated:YES];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[self.navigationItem setHidesBackButton:NO animated:YES];
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 2;
@@ -61,10 +51,12 @@
 	if ([segue.identifier isEqualToString:@"ToLicense"]) {
 		InfoViewController * destinationController = segue.destinationViewController;
 		destinationController.text = kAppLicense;
+		destinationController.title = @"License";
 	}
 	else if ([segue.identifier isEqualToString:@"ToCredits"]) {
 		InfoViewController * destinationController = segue.destinationViewController;
 		destinationController.text = kAppCredits;
+		destinationController.title = @"Open Source Credits";
 	}
 	else if ([segue.identifier isEqualToString:@"ToAbout"]) {
 		InfoViewController * destinationController = segue.destinationViewController;
@@ -73,8 +65,8 @@
 		NSString * appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
 		destinationController.text = [NSString stringWithFormat:kAppAbout, appName, version];
+		destinationController.title = @"About this app";
 	}
 }
-
 
 @end

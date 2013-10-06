@@ -81,7 +81,7 @@
             <objects>
                 <tableViewController id="tkR-Mf-Gpu" customClass="SettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="pBc-gb-RQe">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="752"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -162,7 +162,7 @@
                                             <constraint firstItem="6qa-yh-rWq" firstAttribute="leading" secondItem="e2U-z0-rVP" secondAttribute="leading" constant="51" id="zXY-C5-S9L"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="Hpb-3r-zIb" kind="push" identifier="ToCredits" trigger="accessoryAction" id="py3-mL-QRl"/>
+                                            <segue destination="vde-Bo-c8y" kind="push" identifier="ToCredits" trigger="accessoryAction" id="pfR-OZ-QMg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mbK-aA-sUJ">
@@ -185,7 +185,7 @@
                                             <constraint firstItem="hSr-mi-nGa" firstAttribute="leading" secondItem="mbK-aA-sUJ" secondAttribute="leading" constant="51" id="Tga-Ux-xQD"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="M2Q-wb-hKO" kind="push" identifier="ToAbout" trigger="accessoryAction" id="fmW-c9-LPK"/>
+                                            <segue destination="vde-Bo-c8y" kind="push" identifier="ToAbout" trigger="accessoryAction" id="2oG-NJ-ePB"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -204,8 +204,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="showGridSwitch" destination="Fei-1t-BGC" id="ZC6-a8-iGg"/>
                     </connections>
@@ -223,11 +221,11 @@
                         <viewControllerLayoutGuide type="bottom" id="smm-Qt-VBw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BZn-iI-876">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="752"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-Tu-BXR">
-                                <rect key="frame" x="20" y="20" width="500" height="712"/>
+                                <rect key="frame" x="20" y="20" width="500" height="580"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
@@ -241,83 +239,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="License" id="djK-7l-AdM"/>
+                    <keyCommands/>
                     <connections>
                         <outlet property="infoWebView" destination="rhZ-Tu-BXR" id="8hS-PU-Len"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSK-mE-bEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3477" y="-852"/>
-        </scene>
-        <!--Info View Controller - Open Source Credits-->
-        <scene sceneID="wLP-1L-qnA">
-            <objects>
-                <viewController id="Hpb-3r-zIb" customClass="InfoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PHK-z2-7I5"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Cy-DV-LBI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3K0-cB-z2v">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="752"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-BD-f51">
-                                <rect key="frame" x="20" y="20" width="500" height="712"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="MfV-BD-f51" firstAttribute="top" secondItem="3K0-cB-z2v" secondAttribute="top" constant="20" symbolic="YES" id="Ge6-k0-UAu"/>
-                            <constraint firstItem="MfV-BD-f51" firstAttribute="leading" secondItem="3K0-cB-z2v" secondAttribute="leading" constant="20" symbolic="YES" id="Ntw-MY-yR6"/>
-                            <constraint firstAttribute="trailing" secondItem="MfV-BD-f51" secondAttribute="trailing" constant="20" symbolic="YES" id="e64-2U-paa"/>
-                            <constraint firstAttribute="bottom" secondItem="MfV-BD-f51" secondAttribute="bottom" constant="20" symbolic="YES" id="gGs-WQ-0x4"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Open Source Credits" id="AOu-3k-i8m"/>
-                    <connections>
-                        <outlet property="infoWebView" destination="MfV-BD-f51" id="YZI-gs-eSW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qYV-2L-CfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3477" y="-165"/>
-        </scene>
-        <!--Info View Controller - About this app-->
-        <scene sceneID="OVa-D4-mk8">
-            <objects>
-                <viewController id="M2Q-wb-hKO" customClass="InfoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9sC-j7-xnq"/>
-                        <viewControllerLayoutGuide type="bottom" id="1MX-GZ-eeW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="su0-ss-8S8">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="752"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-ke-Z15">
-                                <rect key="frame" x="20" y="20" width="500" height="712"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="W1g-ke-Z15" firstAttribute="top" secondItem="su0-ss-8S8" secondAttribute="top" constant="20" symbolic="YES" id="J8a-YW-ekW"/>
-                            <constraint firstAttribute="trailing" secondItem="W1g-ke-Z15" secondAttribute="trailing" constant="20" symbolic="YES" id="O7e-NN-8JD"/>
-                            <constraint firstItem="W1g-ke-Z15" firstAttribute="leading" secondItem="su0-ss-8S8" secondAttribute="leading" constant="20" symbolic="YES" id="b3n-6A-fap"/>
-                            <constraint firstAttribute="bottom" secondItem="W1g-ke-Z15" secondAttribute="bottom" constant="20" symbolic="YES" id="fhg-EN-Uaq"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="About this app" id="OFo-Ss-gj9"/>
-                    <connections>
-                        <outlet property="infoWebView" destination="W1g-ke-Z15" id="65a-IX-yGi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AHu-0E-tox" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3477" y="519"/>
+            <point key="canvasLocation" x="3293" y="-312"/>
         </scene>
         <!--Canvas View Controller-->
         <scene sceneID="9tR-2r-Z6I">
@@ -386,4 +315,7 @@ unknown format or unreadable version</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="fSf-dO-Wlt"/>
+    </inferredMetricsTieBreakers>
 </document>

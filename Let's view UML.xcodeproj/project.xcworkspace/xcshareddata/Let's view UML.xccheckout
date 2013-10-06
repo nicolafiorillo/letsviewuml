@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>082CE04A-6383-4C36-9ED2-F2460DE98C44</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Let's view UML</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2BFF240C-8243-4054-B215-2162D42BC9C0</key>
+		<string>https://github.com/nicolafiorillo/letsviewuml.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Let's view UML.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2BFF240C-8243-4054-B215-2162D42BC9C0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nicolafiorillo/letsviewuml.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2BFF240C-8243-4054-B215-2162D42BC9C0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2BFF240C-8243-4054-B215-2162D42BC9C0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>letsviewuml</string>
+		</dict>
+	</array>
+</dict>
+</plist>

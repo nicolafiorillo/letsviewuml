@@ -35,13 +35,11 @@
 
 	self.scrollView.zoomScale = 1.0;
 	self.scrollView.minimumZoomScale = 1;
-	self.scrollView.maximumZoomScale	 = 5;
+	self.scrollView.maximumZoomScale = 5;
 	self.scrollView.alwaysBounceHorizontal = YES;
 	self.scrollView.alwaysBounceVertical = YES;
 
 	self.scrollView.delegate = self;
-
-	//self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
 	if (self.canvasView)
 	{
@@ -117,20 +115,6 @@
 
 - (void)toggleNavigationBar
 {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-	{
-		CGRect rect = self.navigationController.navigationBar.frame;
-
-		rect.origin.y = rect.origin.y < 0 ? rect.origin.y + rect.size.height : rect.origin.y - rect.size.height;
-
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:UINavigationControllerHideShowBarDuration];
-		self.navigationController.navigationBar.frame = rect;
-		[UIView commitAnimations];
-
-		self.navigationBarHidden = rect.origin.y < 0;
-	}
-	else
 		[self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
 }
 

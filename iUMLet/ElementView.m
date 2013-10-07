@@ -173,13 +173,13 @@ CGFloat const kElementViewLineWidth							= 1.0f;
 							cleaned = NO;
 							cleanedLine = [cleanedLine stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"*"]];
 						}
-						if ([cleanedLine isDecoratedWithSymbol:'/'])
+						else if ([cleanedLine isDecoratedWithSymbol:'/'])
 						{
 							style += FontStyleItalic;
 							cleaned = NO;
 							cleanedLine = [cleanedLine stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"//"]];
 						}
-						if ([cleanedLine isDecoratedWithSymbol:'_'])
+						else if ([cleanedLine isDecoratedWithSymbol:'_'])
 						{
 							style += FontStyleUnderscore;
 							cleaned = NO;
@@ -243,7 +243,7 @@ CGFloat const kElementViewLineWidth							= 1.0f;
 {
 	const char * fontName = [self.font.fontName UTF8String];
 
-	if (style & FontStyleBold & FontStyleItalic)
+	if ((style & FontStyleBold) && (style & FontStyleItalic))
 		fontName = [self.fontBoldItalic.fontName UTF8String];
 	else if (style & FontStyleBold)
 		fontName = [self.fontBold.fontName UTF8String];

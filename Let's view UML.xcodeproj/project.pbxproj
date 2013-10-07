@@ -60,6 +60,7 @@
 		97F0F06B17868D3500CAA6C3 /* PackageElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0F06A17868D3500CAA6C3 /* PackageElementView.m */; };
 		97F0F06E17868E2700CAA6C3 /* ElementViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F0F06D17868E2700CAA6C3 /* ElementViewFactory.m */; };
 		97F3D3A317E8217000159844 /* FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F3D3A217E8217000159844 /* FileSystem.m */; };
+		97F61AFD18027DAB0039286C /* bugs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97F61AFC18027DAB0039286C /* bugs.txt */; };
 		97F9754B178096A900EC90BE /* TextElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F9754A178096A900EC90BE /* TextElementView.m */; };
 		97F9754E17809A0A00EC90BE /* NoteElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F9754D17809A0A00EC90BE /* NoteElementView.m */; };
 		97FAE0E21795A43B00A42264 /* CanvasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FAE0E11795A43B00A42264 /* CanvasCollectionViewController.m */; };
@@ -160,6 +161,7 @@
 		97F2F90417DEEA9A00DCB3F7 /* Let's view UML-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Let's view UML-Prefix.pch"; sourceTree = "<group>"; };
 		97F3D3A117E8217000159844 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSystem.h; sourceTree = "<group>"; };
 		97F3D3A217E8217000159844 /* FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSystem.m; sourceTree = "<group>"; };
+		97F61AFC18027DAB0039286C /* bugs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bugs.txt; sourceTree = "<group>"; };
 		97F97549178096A900EC90BE /* TextElementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextElementView.h; sourceTree = "<group>"; };
 		97F9754A178096A900EC90BE /* TextElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextElementView.m; sourceTree = "<group>"; };
 		97F9754C17809A0A00EC90BE /* NoteElementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteElementView.h; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				975905A417E25FF40098AD3D /* WelcomeCanvas.m */,
 				97F3D3A117E8217000159844 /* FileSystem.h */,
 				97F3D3A217E8217000159844 /* FileSystem.m */,
+				97F61AFC18027DAB0039286C /* bugs.txt */,
 			);
 			name = "Let's view UML";
 			path = iUMLet;
@@ -426,6 +429,7 @@
 				9770276B175FAFF500CFB4DC /* Default@2x.png in Resources */,
 				9770276D175FAFF500CFB4DC /* Default-568h@2x.png in Resources */,
 				97702773175FAFF500CFB4DC /* iPad.Storyboard.storyboard in Resources */,
+				97F61AFD18027DAB0039286C /* bugs.txt in Resources */,
 				9706B26F179924C7004D583E /* NoPreview.png in Resources */,
 				9711D37E17A98B4400CAE825 /* Icon-72@2x.png in Resources */,
 				9711D38017A98B4700CAE825 /* Icon-72.png in Resources */,

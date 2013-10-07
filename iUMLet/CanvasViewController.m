@@ -115,7 +115,7 @@
 
 - (void)toggleNavigationBar
 {
-		[self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+	[self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

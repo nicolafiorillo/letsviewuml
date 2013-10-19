@@ -11,13 +11,11 @@
 
 @implementation GroupItemCollectionViewCell
 
-+(Class)layerClass
+-(void)drawRect:(CGRect)rect
 {
-	return [CATiledLayer class];
-}
+	NSLog(@"Redrawing cell: %@", self.name);
 
-- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context
-{
+	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSaveGState(context);
 
 	CGContextSetShouldAntialias(context, NO);

@@ -44,15 +44,15 @@ typedef NS_ENUM(NSUInteger, LineType)
 static CGFloat DegreesToRadians(CGFloat degrees) { return degrees * M_PI / 180; };
 static CGFloat RadiansToDegrees(CGFloat radians) { return radians * 180 / M_PI; };
 
-static CGFloat const kRelationElementArrowWingLength			= 13.0f;
-static CGFloat const kRelationElementAccessorXOffset			= 15.0f;
+static CGFloat const kRelationElementArrowWingLength		= 13.0f;
+static CGFloat const kRelationElementAccessorXOffset		= 15.0f;
 static CGFloat const kRelationElementAccessorYMOffset		= 5.0f;
 static CGFloat const kRelationElementAccessorSpaceOffset	= 5.0f;
 static CGFloat const kRelationElementQualificationSpace		= 12.0f;
 static CGFloat const kRelationElementCrossDistance			= 20.0f;
-static CGFloat const kRelationElementCrossSideLenght			= 10.0f;
-static CGFloat const kRelationElementBallRay					= 10.0f;
-static CGFloat const kRelationElementHalfMoonRay				= 15.0f;
+static CGFloat const kRelationElementCrossSideLenght		= 10.0f;
+static CGFloat const kRelationElementBallRay				= 10.0f;
+static CGFloat const kRelationElementHalfMoonRay			= 15.0f;
 static CGFloat const kRelationElementBallOffsetByHalfMoon	= -5.0f;
 static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 
@@ -319,7 +319,7 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 		CGPoint pa = [(NSValue*)points[0] CGPointValue];
 		CGPoint pb = [(NSValue*)points[1] CGPointValue];
 
-		NSLog(@"drawing left");
+//		NSLog(@"drawing left");
 
 		if ([RelationElementView terminalIsArrow:self.leftSymbol])
 			[self drawArrowWithSymbol:self.leftSymbol inContext:context pointer:pa direction:pb];
@@ -339,7 +339,7 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 		CGPoint pv = [(NSValue*)points[points.count - 2] CGPointValue];
 		CGPoint pz = [(NSValue*)points[points.count - 1] CGPointValue];
 
-		NSLog(@"drawing right");
+//		NSLog(@"drawing right");
 
 		if ([RelationElementView terminalIsArrow:self.rightSymbol])
 			[self drawArrowWithSymbol:self.rightSymbol inContext:context pointer:pz direction:pv];

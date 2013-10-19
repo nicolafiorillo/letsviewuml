@@ -145,6 +145,7 @@
 
 - (void)didDismiss:(CanvasViewController *)canvasViewController
 {
+	NSLog(@"Calling cell update: %@", canvasViewController.indexPath);
 	[self.collectionView reloadItemsAtIndexPaths:@[canvasViewController.indexPath]];
 }
 

@@ -44,17 +44,19 @@ typedef NS_ENUM(NSUInteger, LineType)
 static CGFloat DegreesToRadians(CGFloat degrees) { return degrees * M_PI / 180; };
 static CGFloat RadiansToDegrees(CGFloat radians) { return radians * 180 / M_PI; };
 
-static CGFloat const kRelationElementArrowWingLength		= 13.0f;
-static CGFloat const kRelationElementAccessorXOffset		= 15.0f;
-static CGFloat const kRelationElementAccessorYMOffset		= 5.0f;
-static CGFloat const kRelationElementAccessorSpaceOffset	= 5.0f;
-static CGFloat const kRelationElementQualificationSpace		= 12.0f;
-static CGFloat const kRelationElementCrossDistance			= 20.0f;
-static CGFloat const kRelationElementCrossSideLenght		= 10.0f;
-static CGFloat const kRelationElementBallRay				= 10.0f;
-static CGFloat const kRelationElementHalfMoonRay			= 15.0f;
-static CGFloat const kRelationElementBallOffsetByHalfMoon	= -5.0f;
-static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
+static CGFloat const kRelationElementArrowWingLength			= 13.0f;
+static CGFloat const kRelationElementAccessorXOffset			= 15.0f;
+static CGFloat const kRelationElementAccessorYMOffset			= 5.0f;
+static CGFloat const kRelationElementAccessorSpaceOffset		= 5.0f;
+static CGFloat const kRelationElementQualificationSpace			= 12.0f;
+static CGFloat const kRelationElementQualificationHeight		= 20.0f;
+static CGFloat const kRelationElementQualificationTextOffset	= -2.0f;
+static CGFloat const kRelationElementCrossDistance				= 20.0f;
+static CGFloat const kRelationElementCrossSideLenght			= 10.0f;
+static CGFloat const kRelationElementBallRay					= 10.0f;
+static CGFloat const kRelationElementHalfMoonRay				= 15.0f;
+static CGFloat const kRelationElementBallOffsetByHalfMoon		= -5.0f;
+static CGFloat const kRelationElementArrowWingAngle				= 27 * M_PI / 180;
 
 @interface RelationElementView()
 
@@ -72,6 +74,8 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 @property (nonatomic)CGFloat accessorYMOffset;
 @property (nonatomic)CGFloat accessorSpaceffset;
 @property (nonatomic)CGFloat qualificationSpace;
+@property (nonatomic)CGFloat qualificationHeight;
+@property (nonatomic)CGFloat qualificationTextOffset;
 
 @property (nonatomic)CGFloat crossDistance;
 @property (nonatomic)CGFloat crossSideLenght;
@@ -130,6 +134,8 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 		self.accessorYMOffset = kRelationElementAccessorYMOffset * self.scaleFactor;
 		self.accessorSpaceffset = kRelationElementAccessorSpaceOffset * self.scaleFactor;
 		self.qualificationSpace = kRelationElementQualificationSpace * self.scaleFactor;
+		self.qualificationHeight = kRelationElementQualificationHeight * self.scaleFactor;
+		self.qualificationTextOffset = kRelationElementQualificationTextOffset * self.scaleFactor;
 
 		self.crossDistance = kRelationElementCrossDistance * self.scaleFactor;
 		self.crossSideLenght  = kRelationElementCrossSideLenght * self.scaleFactor;
@@ -148,7 +154,8 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 {
 	CGPoint newStartPoint = CGPointZero;
 	
-	CGRect qRect = CGRectMake(pa.x - self.qualificationSpace - q.textSize.width / 2, pa.y - q.textSize.height / 2, q.textSize.width + self.qualificationSpace * 2, q.textSize.height);
+	CGRect qRect = CGRectIntegral(CGRectMake(pa.x - self.qualificationSpace - q.textSize.width / 2, pa.y - self.qualificationHeight / 2, q.textSize.width + self.qualificationSpace * 2, self.qualificationHeight));
+
 	CGPoint center = [Geometry intersectionPoint:qRect outPoint:pb];
 
 	if (!CGPointEqualToPoint(center, CGPointZero))
@@ -306,21 +313,26 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 	CGContextRestoreGState(context);
 }
 
+- (void)drawQualificationText:(TextLine *)q inContext:(CGContextRef)context
+{
+	if (q != nil)
+	{
+		CGContextStrokeRect(context, q.textFixedPosition);
+		CGRect textRect = CGRectOffset(q.textFixedPosition, 0, self.qualificationTextOffset);
+		[self drawText:q inContext:context centerAtPoint:[Geometry centerOfRect:textRect]];
+	}
+}
+
 - (void)drawTerminalsInContext:(CGContextRef)context withPoints:(NSArray *)points
 {
 	if (points.count > 1)
 	{
-		if (self.q1 != nil)
-		{
-			CGContextStrokeRect(context, self.q1.textFixedPosition);
-			[self drawText:self.q1 inContext:context centerAtPoint:[Geometry centerOfRect:self.q1.textFixedPosition]];
-		}
+		[self drawQualificationText:self.q1 inContext:context];
 
 		CGPoint pa = [(NSValue*)points[0] CGPointValue];
 		CGPoint pb = [(NSValue*)points[1] CGPointValue];
 
-//		NSLog(@"drawing left");
-
+		// Drawing left
 		if ([RelationElementView terminalIsArrow:self.leftSymbol])
 			[self drawArrowWithSymbol:self.leftSymbol inContext:context pointer:pa direction:pb];
 		else if ([RelationElementView terminalIsDiamond:self.leftSymbol])
@@ -330,17 +342,12 @@ static CGFloat const kRelationElementArrowWingAngle			= 27 * M_PI / 180;
 		else if ([RelationElementView terminalIsBalls:self.leftSymbol])
 			[self drawBallWithSymbol:self.leftSymbol inContext:context pointer:pa direction:pb];
 
-		if (self.q2 != nil)
-		{
-			CGContextStrokeRect(context, self.q2.textFixedPosition);
-			[self drawText:self.q2 inContext:context centerAtPoint:[Geometry centerOfRect:self.q2.textFixedPosition]];
-		}
+		[self drawQualificationText:self.q2 inContext:context];
 
 		CGPoint pv = [(NSValue*)points[points.count - 2] CGPointValue];
 		CGPoint pz = [(NSValue*)points[points.count - 1] CGPointValue];
 
-//		NSLog(@"drawing right");
-
+		// Drawing right
 		if ([RelationElementView terminalIsArrow:self.rightSymbol])
 			[self drawArrowWithSymbol:self.rightSymbol inContext:context pointer:pz direction:pv];
 		else if ([RelationElementView terminalIsDiamond:self.rightSymbol])

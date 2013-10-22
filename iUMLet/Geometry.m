@@ -30,7 +30,7 @@
 	CGFloat B2 = p3.x - p4.x;
 	CGFloat C2 = A2 * p3.x + B2 * p3.y;
 
-	double det = A1 * B2 - A2 * B1;
+	CGFloat det = A1 * B2 - A2 * B1;
 
 	CGPoint intersection = CGPointZero;
 

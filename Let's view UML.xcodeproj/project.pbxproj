@@ -130,6 +130,7 @@
 		97B78D5817AEA58800C226BE /* GenericItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericItemCollectionViewCell.m; sourceTree = "<group>"; };
 		97B78D5A17AEB10600C226BE /* GroupItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupItemCollectionViewCell.h; sourceTree = "<group>"; };
 		97B78D5B17AEB10600C226BE /* GroupItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupItemCollectionViewCell.m; sourceTree = "<group>"; };
+		97E056A71816454300B6EDC8 /* NoPreview.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NoPreview.xcf; sourceTree = "<group>"; };
 		97E175EF1781C623002F8607 /* ActorElementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ActorElementView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		97E175F01781C623002F8607 /* ActorElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ActorElementView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		97E239B017DE33C50019AAA8 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		9711D38117A98B4F00CAE825 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				97E056A71816454300B6EDC8 /* NoPreview.xcf */,
 				975905A117E25D290098AD3D /* Welcome.uxf */,
 				9706B26E179924C7004D583E /* NoPreview.png */,
 				972708BD17BE976700870C37 /* Default-Portrait@2x~ipad.png */,

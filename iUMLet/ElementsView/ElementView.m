@@ -11,23 +11,23 @@
 #import "NSString+NSStringLib.h"
 #import <QuartzCore/QuartzCore.h>
 
-static NSString * const kElementViewFontName				= @"TrebuchetMS";
-static NSString * const kElementViewFontNameBold			= @"TrebuchetMS-Bold";
+static NSString * const kElementViewFontName			= @"TrebuchetMS";
+static NSString * const kElementViewFontNameBold		= @"TrebuchetMS-Bold";
 static NSString * const kElementViewFontNameItalic		= @"TrebuchetMS-Italic";
 static NSString * const kElementViewFontNameBoldItalic	= @"Trebuchet-BoldItalic";
 
-static CGFloat const kElementViewFontSize					= 15.0f;
+static CGFloat const kElementViewFontSize				= 15.0f;
 static CGFloat const kElementViewFontUpperSpace			= 2.0f;
-static CGFloat const kElementViewFontFromBottomSpace		= 6.0f;
+static CGFloat const kElementViewFontFromBottomSpace	= 6.0f;
 static CGFloat const kElementViewFontSeparatorSpace		= 3.0f;
 static CGFloat const kElementViewFontLeftSpace			= 8.0f;
-static CGFloat const kElementViewUnderscoreSpace			= 0.7f;
-static CGFloat const kElementViewBackgroundAlpha			= 0.55f;
+static CGFloat const kElementViewUnderscoreSpace		= 0.7f;
+static CGFloat const kElementViewBackgroundAlpha		= 0.55f;
 
-static CGFloat const kElementViewArrowDim					= 8.0f;
+static CGFloat const kElementViewArrowDim				= 8.0f;
 static CGFloat const kElementViewArrowTextDistance		= 3.0f;
 
-CGFloat const kElementViewLineWidth							= 1.0f;
+CGFloat const kElementViewLineWidth						= 1.0f;
 
 @interface ElementView()
 
@@ -36,14 +36,14 @@ CGFloat const kElementViewLineWidth							= 1.0f;
 @property (strong, nonatomic)UIFont * fontItalic;
 @property (strong, nonatomic)UIFont * fontBoldItalic;
 
-@property	(strong, nonatomic)UIColor * backgroundColor;
-@property	(strong, nonatomic)UIColor * foregroundColor;
+@property (strong, nonatomic)UIColor * backgroundColor;
+@property (strong, nonatomic)UIColor * foregroundColor;
 
-@property	(strong, nonatomic, readwrite)NSMutableArray * additionalAttributesPoints;
-@property	(strong, nonatomic)NSMutableArray * text;
+@property (strong, nonatomic, readwrite)NSMutableArray * additionalAttributesPoints;
+@property (strong, nonatomic)NSMutableArray * text;
 
-@property	(nonatomic)CGFloat arrowDim;
-@property	(nonatomic)CGFloat arrowTextDistance;
+@property (nonatomic)CGFloat arrowDim;
+@property (nonatomic)CGFloat arrowTextDistance;
 
 @end
 
@@ -276,15 +276,23 @@ CGFloat const kElementViewLineWidth							= 1.0f;
 
 - (void)drawText:(TextLine *)textLine inContext:(CGContextRef)context atX:(CGFloat)x atY:(CGFloat)y
 {
-	const char * fontName = [self fontNameByStyle:textLine.fontStyle];
+	NSString * fontName = [NSString stringWithFormat:@"%s", [self fontNameByStyle:textLine.fontStyle]];
 
-	CGContextSelectFont(context, fontName, self.fontSize, kCGEncodingMacRoman);
-	CGContextSetTextMatrix(context, CGAffineTransformMakeScale(1.0, -1.0));
+    CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
+
+    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, 15, &matrix);
+    NSDictionary * attributesDictionaryTitle = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, nil];
+    NSString * text = [NSString stringWithFormat:@"%s", [textLine printable]];
+
+    NSAttributedString * attrString = [[NSAttributedString alloc]initWithString:text attributes:attributesDictionaryTitle];
+    CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
+
 	CGContextSetTextDrawingMode(context, kCGTextFill);
 	CGContextSetShouldAntialias(context, true);
 
-	const char * label = [textLine printable];
-	CGContextShowTextAtPoint(context, x, y, label, strlen(label));
+    CGContextSetTextPosition(context, x, y);
+    CTLineDraw(line, context);
+    CFRelease(line);
 
 	if (textLine.hasLeftArrow)
 		[self drawArrow:context rightArrow:NO atX:x atY:y];

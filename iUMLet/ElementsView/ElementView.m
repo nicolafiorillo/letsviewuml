@@ -94,8 +94,8 @@ CGFloat const kElementViewLineWidth							= 1.0f;
     self = [super initWithFrame:element.coordinates];
 
 	if (self) {
-		CATiledLayer	* thisTiledLayer = (CATiledLayer *)self.layer;
-//		thisTiledLayer.levelsOfDetail = 5;
+		CATiledLayer * thisTiledLayer = (CATiledLayer *)self.layer;
+		thisTiledLayer.levelsOfDetail = 4;
 		thisTiledLayer.levelsOfDetailBias = 4;
 
 		self.opaque = NO;

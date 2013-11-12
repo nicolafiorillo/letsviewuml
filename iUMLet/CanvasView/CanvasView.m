@@ -15,11 +15,6 @@
 
 @implementation CanvasView
 
-+(Class)layerClass
-{
-	return [CATiledLayer class];
-}
-
 - (void)setCanvas:(Canvas *)canvas
 {
 	_canvas = canvas;
@@ -46,33 +41,24 @@
 	self = [super initWithFrame:dimension];
 
 	if (self)
-	{
-		CATiledLayer	* thisTiledLayer = (CATiledLayer *)self.layer;
-//		thisTiledLayer.levelsOfDetail = 5;
-		thisTiledLayer.levelsOfDetailBias = 4;
 		self.canvas = canvas;
-	}
 
 	return self;
 }
 
 - (void)drawRect:(CGRect)rect
 {
-
-}
-
-- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)context
-{
 #warning TODO remove grid for preview (how?)
-
+    
+	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSaveGState(context);
-
+    
 	CGContextSetRGBFillColor(context, 255, 255, 255, 1);
-    CGContextFillRect(context, layer.bounds);
-
+    CGContextFillRect(context, self.bounds);
+    
 	if ([Settings getInstance].showGrid)
-		[Grid drawGridInContext:context inRect:layer.bounds];
-
+		[Grid drawGridInContext:context inRect:self.bounds];
+    
 	CGContextRestoreGState(context);
 }
 

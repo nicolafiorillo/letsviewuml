@@ -34,8 +34,8 @@
     [super viewDidLoad];
 
 	self.scrollView.zoomScale = 1.0;
-	self.scrollView.minimumZoomScale = 1;
-	self.scrollView.maximumZoomScale = 5;
+	self.scrollView.minimumZoomScale = 1.0;
+	self.scrollView.maximumZoomScale = 8.0;
 	self.scrollView.alwaysBounceHorizontal = YES;
 	self.scrollView.alwaysBounceVertical = YES;
 

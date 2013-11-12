@@ -83,6 +83,8 @@
 
 	NSString * realtext = [NSString stringWithCString:[t printable] encoding:NSISOLatin1StringEncoding];
 	t.textSize = [realtext sizeWithFont:font constrainedToSize:size lineBreakMode:0];
+    
+//	t.textSize = [realtext boundingRectWithSize:size options:0 attributes:nil context:nil].size;
 
 	return t;
 }

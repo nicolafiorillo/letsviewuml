@@ -46,7 +46,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Let's view UML" id="oHX-MM-S2t">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="EnM-0b-uKd">
+                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="EnM-0b-uKd">
                             <connections>
                                 <segue destination="tyc-jD-dZb" kind="modal" identifier="Settings" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="xqM-mK-X0M"/>
                             </connections>
@@ -310,6 +310,9 @@ unknown format or unreadable version</string>
             <point key="canvasLocation" x="1687" y="-312"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

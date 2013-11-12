@@ -1,3 +1,0 @@
-Bugs:
-
-- 'Qualification' non viene correttamente renderizzato

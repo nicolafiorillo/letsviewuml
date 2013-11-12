@@ -29,7 +29,7 @@
 	CGContextFillRect(context, bottomRect);
 	CGContextStrokeRect(context, bottomRect);
 
-	CGSize textSize = [self.name sizeWithFont:self.font constrainedToSize:self.bounds.size lineBreakMode:0];
+    CGSize textSize = [self.name sizeWithAttributes:@{NSFontAttributeName:self.font}];
 	CGRect textRect = CGRectMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds) + 1, textSize.width + kGenericItemCollectionViewCellLeftSpace * 2, kGenericItemCollectionViewCellSeparatorDistance - 1);
 
 	CGContextFillRect(context, textRect);

@@ -57,7 +57,7 @@ static CGFloat const kGenericItemCollectionViewCellFontSize         = 15.0f;
 - (void)setName:(NSString *)name
 {
 	_name = name;
-	self.textSize = [name sizeWithFont:self.font constrainedToSize:self.bounds.size lineBreakMode:0];
+    self.textSize = [name sizeWithAttributes:@{NSFontAttributeName:self.font}];
 }
 
 - (void)drawName:(CGContextRef)context position:(GICVC_TextPosition)position

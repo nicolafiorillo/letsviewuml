@@ -14,6 +14,7 @@
 @property (nonatomic)CGRect previewRect;
 @property (nonatomic)CGSize textSize;
 @property (nonatomic, strong)UIImage * noPreviewImage;
+@property (nonatomic, strong)NSDictionary * attributesDictionaryTitle;
 
 @end
 
@@ -25,7 +26,7 @@ CGFloat const kGenericItemCollectionViewCellLineWidth				= 1.0f;
 CGFloat const kGenericItemCollectionViewCellLeftSpace				= 10.0f;
 
 static NSString * const kGenericItemCollectionViewCellFontName		= @"TrebuchetMS";
-static CGFloat const kGenericItemCollectionViewCellFontSize		= 15.0f;
+static CGFloat const kGenericItemCollectionViewCellFontSize         = 15.0f;
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -43,6 +44,11 @@ static CGFloat const kGenericItemCollectionViewCellFontSize		= 15.0f;
 		self.previewRect = CGRectMake(1, -kGenericItemCollectionViewCellSeparatorDistance, CGRectGetWidth(self.bounds) - 2, CGRectGetHeight(self.bounds) - kGenericItemCollectionViewCellSeparatorDistance - 1);
 
 		self.noPreviewImage = [UIImage imageNamed:@"NoPreview"];
+        
+        CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
+        
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)kGenericItemCollectionViewCellFontName, 15, &matrix);
+        self.attributesDictionaryTitle = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, nil];
 	}
 
 	return self;
@@ -63,15 +69,17 @@ static CGFloat const kGenericItemCollectionViewCellFontSize		= 15.0f;
 	CGContextSaveGState(context);
 
 	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    
+    NSAttributedString * attrString = [[NSAttributedString alloc]initWithString:self.name attributes:self.attributesDictionaryTitle];
+    CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
 
-	CGContextSelectFont(context, [kGenericItemCollectionViewCellFontName UTF8String], 15.0, kCGEncodingMacRoman);
-	CGContextSetTextMatrix(context, CGAffineTransformMakeScale(1.0, -1.0));
 	CGContextSetTextDrawingMode(context, kCGTextFill);
 	CGContextSetShouldAntialias(context, true);
 
-	const char * label = [self.name UTF8String];
-	CGContextShowTextAtPoint(context, x, kGenericItemCollectionViewCellTitleDistance, label, strlen(label));
-
+	CGContextSetTextPosition(context, x, kGenericItemCollectionViewCellTitleDistance);
+    CTLineDraw(line, context);
+    CFRelease(line);
+    
 	CGContextRestoreGState(context);
 }
 

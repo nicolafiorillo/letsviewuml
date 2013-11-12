@@ -58,7 +58,6 @@
 		97FCF8ED1831FF08000F01A3 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E91831FF08000F01A3 /* CanvasView.m */; };
 		97FCF8EE1831FF08000F01A3 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */; };
 		97FCF8F41831FF85000F01A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8F01831FF85000F01A3 /* AppDelegate.m */; };
-		97FCF8F51831FF85000F01A3 /* Let's view UML-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8F11831FF85000F01A3 /* Let's view UML-Info.plist */; };
 		97FCF8F61831FF85000F01A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8F31831FF85000F01A3 /* main.m */; };
 		97FCF8FD183200D7000F01A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8FA183200D7000F01A3 /* Default-568h@2x.png */; };
 		97FCF8FE183200D7000F01A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8FB183200D7000F01A3 /* Default.png */; };
@@ -71,6 +70,7 @@
 		97FCF90C18320101000F01A3 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF90618320101000F01A3 /* Icon-72@2x.png */; };
 		97FCF912183201F1000F01A3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF910183201F1000F01A3 /* LICENSE */; };
 		97FCF913183201F1000F01A3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF911183201F1000F01A3 /* README.md */; };
+		97FCF91518329E21000F01A3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FCF91418329E21000F01A3 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +181,7 @@
 		97FCF90618320101000F01A3 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "AppImages/Icon-72@2x.png"; sourceTree = "<group>"; };
 		97FCF910183201F1000F01A3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		97FCF911183201F1000F01A3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		97FCF91418329E21000F01A3 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97FCF91518329E21000F01A3 /* CoreText.framework in Frameworks */,
 				97F92AC018314C1A005B1EB1 /* libTestFlight.a in Frameworks */,
 				973D754717A813820030C2AD /* libz.dylib in Frameworks */,
 				9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */,
@@ -212,10 +214,10 @@
 		9770274A175FAFF500CFB4DC = {
 			isa = PBXGroup;
 			children = (
-				97702755175FAFF500CFB4DC /* Frameworks */,
 				9770275C175FAFF500CFB4DC /* Let's view UML */,
-				97FCF910183201F1000F01A3 /* LICENSE */,
+				97702755175FAFF500CFB4DC /* Frameworks */,
 				97702754175FAFF500CFB4DC /* Products */,
+				97FCF910183201F1000F01A3 /* LICENSE */,
 				97FCF911183201F1000F01A3 /* README.md */,
 			);
 			sourceTree = "<group>";
@@ -231,6 +233,7 @@
 		97702755175FAFF500CFB4DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97FCF91418329E21000F01A3 /* CoreText.framework */,
 				9770275A175FAFF500CFB4DC /* CoreGraphics.framework */,
 				97702758175FAFF500CFB4DC /* Foundation.framework */,
 				973D754617A813820030C2AD /* libz.dylib */,
@@ -506,7 +509,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97FCF8F51831FF85000F01A3 /* Let's view UML-Info.plist in Resources */,
 				97F92B111831510F005B1EB1 /* NoPreview.xcf in Resources */,
 				97FCF913183201F1000F01A3 /* README.md in Resources */,
 				97FCF90C18320101000F01A3 /* Icon-72@2x.png in Resources */,
@@ -674,7 +676,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/iUMLet\\\"",
+					"$(SRCROOT)/iUMLet",
 					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/libs,
 				);
 				PRODUCT_NAME = "Let's view UML";
@@ -697,7 +699,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/iUMLet\\\"",
+					"$(SRCROOT)/iUMLet",
 					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/libs,
 				);
 				PRODUCT_NAME = "Let's view UML";

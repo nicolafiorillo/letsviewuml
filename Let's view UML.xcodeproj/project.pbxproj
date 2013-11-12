@@ -212,10 +212,10 @@
 		9770274A175FAFF500CFB4DC = {
 			isa = PBXGroup;
 			children = (
-				9770275C175FAFF500CFB4DC /* Let's view UML */,
 				97702755175FAFF500CFB4DC /* Frameworks */,
-				97702754175FAFF500CFB4DC /* Products */,
+				9770275C175FAFF500CFB4DC /* Let's view UML */,
 				97FCF910183201F1000F01A3 /* LICENSE */,
+				97702754175FAFF500CFB4DC /* Products */,
 				97FCF911183201F1000F01A3 /* README.md */,
 			);
 			sourceTree = "<group>";
@@ -231,11 +231,11 @@
 		97702755175FAFF500CFB4DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9770275A175FAFF500CFB4DC /* CoreGraphics.framework */,
+				97702758175FAFF500CFB4DC /* Foundation.framework */,
 				973D754617A813820030C2AD /* libz.dylib */,
 				9736BFF9176C477A0041964B /* QuartzCore.framework */,
 				97702756175FAFF500CFB4DC /* UIKit.framework */,
-				97702758175FAFF500CFB4DC /* Foundation.framework */,
-				9770275A175FAFF500CFB4DC /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,20 +243,20 @@
 		9770275C175FAFF500CFB4DC /* Let's view UML */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF90D18320157000F01A3 /* Storyboards */,
 				97FCF8F9183200BE000F01A3 /* AppImages */,
+				97FCF8C21831FD0E000F01A3 /* CanvasCollection */,
 				97FCF8E81831FEE8000F01A3 /* CanvasView */,
+				97F9754F1780A3A300EC90BE /* ElementsView */,
 				97FCF8E41831FEA3000F01A3 /* FileSystem */,
 				97FCF8E01831FE6C000F01A3 /* Grid */,
-				97FCF8CF1831FD85000F01A3 /* Settings */,
-				97FCF8C21831FD0E000F01A3 /* CanvasCollection */,
-				97F92B0C183150D5005B1EB1 /* Preview */,
-				97F92B061831509C005B1EB1 /* Welcome */,
-				973D754217A812E30030C2AD /* TestFlight */,
-				97F9754F1780A3A300EC90BE /* ElementsView */,
 				97702788175FC3B100CFB4DC /* Model */,
-				97702785175FC35E00CFB4DC /* XML */,
+				97F92B0C183150D5005B1EB1 /* Preview */,
+				97FCF8CF1831FD85000F01A3 /* Settings */,
+				97FCF90D18320157000F01A3 /* Storyboards */,
 				9770275D175FAFF500CFB4DC /* Supporting Files */,
+				973D754217A812E30030C2AD /* TestFlight */,
+				97F92B061831509C005B1EB1 /* Welcome */,
+				97702785175FC35E00CFB4DC /* XML */,
 			);
 			name = "Let's view UML";
 			path = iUMLet;
@@ -265,14 +265,14 @@
 		9770275D175FAFF500CFB4DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF8F71832007E000F01A3 /* ExternalKeys.h */,
-				97FCF8F81832007E000F01A3 /* ConstStrings.h */,
-				97FCF8EF1831FF85000F01A3 /* Let's view UML-Prefix.pch */,
-				97FCF8F01831FF85000F01A3 /* AppDelegate.m */,
-				97FCF8F11831FF85000F01A3 /* Let's view UML-Info.plist */,
 				97FCF8F21831FF85000F01A3 /* AppDelegate.h */,
-				97FCF8F31831FF85000F01A3 /* main.m */,
+				97FCF8F01831FF85000F01A3 /* AppDelegate.m */,
+				97FCF8F81832007E000F01A3 /* ConstStrings.h */,
+				97FCF8F71832007E000F01A3 /* ExternalKeys.h */,
 				9770275F175FAFF500CFB4DC /* InfoPlist.strings */,
+				97FCF8F11831FF85000F01A3 /* Let's view UML-Info.plist */,
+				97FCF8EF1831FF85000F01A3 /* Let's view UML-Prefix.pch */,
+				97FCF8F31831FF85000F01A3 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,8 +280,8 @@
 		97702785175FC35E00CFB4DC /* XML */ = {
 			isa = PBXGroup;
 			children = (
-				97F92B0018314FA6005B1EB1 /* CanvasLoader.m */,
 				97F92B0118314FA6005B1EB1 /* CanvasLoader.h */,
+				97F92B0018314FA6005B1EB1 /* CanvasLoader.m */,
 				97F92B0218314FA6005B1EB1 /* SMXMLDocument.h */,
 				97F92B0318314FA6005B1EB1 /* SMXMLDocument.m */,
 			);
@@ -293,9 +293,9 @@
 			children = (
 				97F92AF418314F5A005B1EB1 /* Canvas.h */,
 				97F92AF518314F5A005B1EB1 /* Canvas.m */,
+				97F92AF818314F5A005B1EB1 /* Element.h */,
 				97F92AF618314F5A005B1EB1 /* Element.m */,
 				97F92AF718314F5A005B1EB1 /* LocalRepository.h */,
-				97F92AF818314F5A005B1EB1 /* Element.h */,
 				97F92AF918314F5A005B1EB1 /* LocalRepository.m */,
 				97F92AFA18314F5A005B1EB1 /* Repository.h */,
 				97F92AFB18314F5A005B1EB1 /* Repository.m */,
@@ -307,8 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				97F92B07183150BB005B1EB1 /* Welcome.uxf */,
-				97F92B08183150BB005B1EB1 /* WelcomeCanvas.m */,
 				97F92B09183150BB005B1EB1 /* WelcomeCanvas.h */,
+				97F92B08183150BB005B1EB1 /* WelcomeCanvas.m */,
 			);
 			name = Welcome;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 			children = (
 				97F92B121831514F005B1EB1 /* NoPreview.png */,
 				97F92B101831510F005B1EB1 /* NoPreview.xcf */,
-				97F92B0D183150E3005B1EB1 /* Preview.m */,
 				97F92B0E183150E3005B1EB1 /* Preview.h */,
+				97F92B0D183150E3005B1EB1 /* Preview.m */,
 			);
 			name = Preview;
 			sourceTree = "<group>";
@@ -327,40 +327,40 @@
 		97F9754F1780A3A300EC90BE /* ElementsView */ = {
 			isa = PBXGroup;
 			children = (
-				97F92AC118314EAB005B1EB1 /* ElementView.m */,
-				97F92AC218314EAB005B1EB1 /* TextLine.m */,
-				97F92AC318314EAB005B1EB1 /* RelationElementView.m */,
-				97F92AC418314EAB005B1EB1 /* Geometry.m */,
-				97F92AC518314EAB005B1EB1 /* ClassElementView.m */,
-				97F92AC618314EAB005B1EB1 /* NSString+NSStringLib.m */,
-				97F92AC718314EAB005B1EB1 /* NSString+NSStringLib.h */,
-				97F92AC818314EAB005B1EB1 /* TextLine.h */,
-				97F92AC918314EAB005B1EB1 /* ElementView.h */,
-				97F92ACA18314EAB005B1EB1 /* StateElementView.m */,
-				97F92ACB18314EAB005B1EB1 /* FinalStateElementView.m */,
-				97F92ACC18314EAB005B1EB1 /* InitialStateElementView.m */,
-				97F92ACD18314EAB005B1EB1 /* ElementViewFactory.m */,
-				97F92ACE18314EAB005B1EB1 /* StateElementView.h */,
-				97F92ACF18314EAB005B1EB1 /* FinalStateElementView.h */,
-				97F92AD018314EAB005B1EB1 /* InitialStateElementView.h */,
-				97F92AD118314EAB005B1EB1 /* UseCaseElementView.m */,
-				97F92AD218314EAB005B1EB1 /* TextElementView.m */,
-				97F92AD318314EAB005B1EB1 /* InterfaceElementView.m */,
-				97F92AD418314EAB005B1EB1 /* PackageElementView.m */,
-				97F92AD518314EAB005B1EB1 /* ActorElementView.m */,
-				97F92AD618314EAB005B1EB1 /* NoteElementView.m */,
-				97F92AD718314EAB005B1EB1 /* ThreeWayRelationElementView.m */,
-				97F92AD818314EAB005B1EB1 /* Geometry.h */,
 				97F92AD918314EAB005B1EB1 /* ActorElementView.h */,
-				97F92ADA18314EAB005B1EB1 /* ElementViewFactory.h */,
-				97F92ADB18314EAB005B1EB1 /* InterfaceElementView.h */,
+				97F92AD518314EAB005B1EB1 /* ActorElementView.m */,
 				97F92ADC18314EAB005B1EB1 /* ClassElementView.h */,
+				97F92AC518314EAB005B1EB1 /* ClassElementView.m */,
+				97F92AC918314EAB005B1EB1 /* ElementView.h */,
+				97F92AC118314EAB005B1EB1 /* ElementView.m */,
+				97F92ADA18314EAB005B1EB1 /* ElementViewFactory.h */,
+				97F92ACD18314EAB005B1EB1 /* ElementViewFactory.m */,
+				97F92ACF18314EAB005B1EB1 /* FinalStateElementView.h */,
+				97F92ACB18314EAB005B1EB1 /* FinalStateElementView.m */,
+				97F92AD818314EAB005B1EB1 /* Geometry.h */,
+				97F92AC418314EAB005B1EB1 /* Geometry.m */,
+				97F92AD018314EAB005B1EB1 /* InitialStateElementView.h */,
+				97F92ACC18314EAB005B1EB1 /* InitialStateElementView.m */,
+				97F92ADB18314EAB005B1EB1 /* InterfaceElementView.h */,
+				97F92AD318314EAB005B1EB1 /* InterfaceElementView.m */,
 				97F92ADD18314EAB005B1EB1 /* NoteElementView.h */,
+				97F92AD618314EAB005B1EB1 /* NoteElementView.m */,
+				97F92AC718314EAB005B1EB1 /* NSString+NSStringLib.h */,
+				97F92AC618314EAB005B1EB1 /* NSString+NSStringLib.m */,
 				97F92ADE18314EAB005B1EB1 /* PackageElementView.h */,
+				97F92AD418314EAB005B1EB1 /* PackageElementView.m */,
 				97F92ADF18314EAB005B1EB1 /* RelationElementView.h */,
+				97F92AC318314EAB005B1EB1 /* RelationElementView.m */,
+				97F92ACE18314EAB005B1EB1 /* StateElementView.h */,
+				97F92ACA18314EAB005B1EB1 /* StateElementView.m */,
 				97F92AE018314EAB005B1EB1 /* TextElementView.h */,
+				97F92AD218314EAB005B1EB1 /* TextElementView.m */,
+				97F92AC818314EAB005B1EB1 /* TextLine.h */,
+				97F92AC218314EAB005B1EB1 /* TextLine.m */,
 				97F92AE118314EAB005B1EB1 /* ThreeWayRelationElementView.h */,
+				97F92AD718314EAB005B1EB1 /* ThreeWayRelationElementView.m */,
 				97F92AE218314EAB005B1EB1 /* UseCaseElementView.h */,
+				97F92AD118314EAB005B1EB1 /* UseCaseElementView.m */,
 			);
 			name = ElementsView;
 			sourceTree = "<group>";
@@ -368,16 +368,16 @@
 		97FCF8C21831FD0E000F01A3 /* CanvasCollection */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF8DD1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m */,
-				97FCF8DE1831FE10000F01A3 /* UIViewController+BackgrounderViewController.h */,
-				97FCF8C31831FD21000F01A3 /* CanvasItemCollectionViewCell.m */,
-				97FCF8C41831FD21000F01A3 /* GroupItemCollectionViewCell.m */,
-				97FCF8C51831FD21000F01A3 /* CanvasCollectionViewController.m */,
-				97FCF8C61831FD21000F01A3 /* GenericItemCollectionViewCell.m */,
-				97FCF8C71831FD21000F01A3 /* GenericItemCollectionViewCell.h */,
 				97FCF8C81831FD21000F01A3 /* CanvasCollectionViewController.h */,
+				97FCF8C51831FD21000F01A3 /* CanvasCollectionViewController.m */,
 				97FCF8C91831FD21000F01A3 /* CanvasItemCollectionViewCell.h */,
+				97FCF8C31831FD21000F01A3 /* CanvasItemCollectionViewCell.m */,
+				97FCF8C71831FD21000F01A3 /* GenericItemCollectionViewCell.h */,
+				97FCF8C61831FD21000F01A3 /* GenericItemCollectionViewCell.m */,
 				97FCF8CA1831FD21000F01A3 /* GroupItemCollectionViewCell.h */,
+				97FCF8C41831FD21000F01A3 /* GroupItemCollectionViewCell.m */,
+				97FCF8DE1831FE10000F01A3 /* UIViewController+BackgrounderViewController.h */,
+				97FCF8DD1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m */,
 			);
 			name = CanvasCollection;
 			sourceTree = "<group>";
@@ -385,14 +385,14 @@
 		97FCF8CF1831FD85000F01A3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF8D01831FD94000F01A3 /* SettingsTableViewController.m */,
-				97FCF8D11831FD94000F01A3 /* Settings.m */,
-				97FCF8D21831FD94000F01A3 /* Settings.h */,
-				97FCF8D31831FD94000F01A3 /* InfoViewController.m */,
 				97FCF8D41831FD94000F01A3 /* InfoViewController.h */,
-				97FCF8D51831FD94000F01A3 /* SettingsTableViewController.h */,
-				97FCF8D61831FD94000F01A3 /* settings@2x.png */,
+				97FCF8D31831FD94000F01A3 /* InfoViewController.m */,
+				97FCF8D21831FD94000F01A3 /* Settings.h */,
+				97FCF8D11831FD94000F01A3 /* Settings.m */,
 				97FCF8D71831FD94000F01A3 /* settings.png */,
+				97FCF8D61831FD94000F01A3 /* settings@2x.png */,
+				97FCF8D51831FD94000F01A3 /* SettingsTableViewController.h */,
+				97FCF8D01831FD94000F01A3 /* SettingsTableViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -418,10 +418,10 @@
 		97FCF8E81831FEE8000F01A3 /* CanvasView */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF8E91831FF08000F01A3 /* CanvasView.m */,
-				97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */,
-				97FCF8EB1831FF08000F01A3 /* CanvasViewController.h */,
 				97FCF8EC1831FF08000F01A3 /* CanvasView.h */,
+				97FCF8E91831FF08000F01A3 /* CanvasView.m */,
+				97FCF8EB1831FF08000F01A3 /* CanvasViewController.h */,
+				97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */,
 			);
 			name = CanvasView;
 			sourceTree = "<group>";
@@ -429,15 +429,15 @@
 		97FCF8F9183200BE000F01A3 /* AppImages */ = {
 			isa = PBXGroup;
 			children = (
-				97FCF90118320101000F01A3 /* Default-Portrait@2x~ipad.png */,
-				97FCF90218320101000F01A3 /* Default-Landscape@2x~ipad.png */,
-				97FCF90318320101000F01A3 /* Default-Portrait~ipad.png */,
-				97FCF90418320101000F01A3 /* Default-Landscape~ipad.png */,
-				97FCF90518320101000F01A3 /* Icon-72.png */,
-				97FCF90618320101000F01A3 /* Icon-72@2x.png */,
 				97FCF8FA183200D7000F01A3 /* Default-568h@2x.png */,
+				97FCF90218320101000F01A3 /* Default-Landscape@2x~ipad.png */,
+				97FCF90418320101000F01A3 /* Default-Landscape~ipad.png */,
+				97FCF90118320101000F01A3 /* Default-Portrait@2x~ipad.png */,
+				97FCF90318320101000F01A3 /* Default-Portrait~ipad.png */,
 				97FCF8FB183200D7000F01A3 /* Default.png */,
 				97FCF8FC183200D7000F01A3 /* Default@2x.png */,
+				97FCF90518320101000F01A3 /* Icon-72.png */,
+				97FCF90618320101000F01A3 /* Icon-72@2x.png */,
 			);
 			name = AppImages;
 			sourceTree = "<group>";

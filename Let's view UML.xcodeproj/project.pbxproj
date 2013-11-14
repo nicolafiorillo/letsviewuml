@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9718FB021834A4A2005FD538 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9718FB011834A4A2005FD538 /* GridView.m */; };
 		97296A351834300F00FBA1B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
 		9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
 		973D754717A813820030C2AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 973D754617A813820030C2AD /* libz.dylib */; };
@@ -70,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9718FB001834A4A2005FD538 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = CanvasView/GridView.h; sourceTree = "<group>"; };
+		9718FB011834A4A2005FD538 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = CanvasView/GridView.m; sourceTree = "<group>"; };
 		97296A341834300F00FBA1B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9736BFF9176C477A0041964B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		973D754617A813820030C2AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -421,6 +424,8 @@
 				97FCF8E91831FF08000F01A3 /* CanvasView.m */,
 				97FCF8EB1831FF08000F01A3 /* CanvasViewController.h */,
 				97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */,
+				9718FB001834A4A2005FD538 /* GridView.h */,
+				9718FB011834A4A2005FD538 /* GridView.m */,
 			);
 			name = CanvasView;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				97F92B0F183150E3005B1EB1 /* Preview.m in Sources */,
 				97F92AFC18314F5A005B1EB1 /* Canvas.m in Sources */,
 				97F92B0B183150BB005B1EB1 /* WelcomeCanvas.m in Sources */,
+				9718FB021834A4A2005FD538 /* GridView.m in Sources */,
 				97FCF8DF1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

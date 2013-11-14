@@ -11,7 +11,7 @@
 
 @interface CanvasView : UIView
 
-@property	(strong, nonatomic)Canvas *canvas;
+@property (strong, nonatomic)Canvas *canvas;
 
 - (id)initWithCanvas:(Canvas *)canvas;
 

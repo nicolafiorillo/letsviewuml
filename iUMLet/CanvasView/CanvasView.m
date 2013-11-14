@@ -12,6 +12,7 @@
 #import "ElementViewFactory.h"
 #import "Grid.h"
 #import "Settings.h"
+#import "GridView.h"
 
 @implementation CanvasView
 
@@ -46,24 +47,16 @@
 	return self;
 }
 
-- (void)drawRect:(CGRect)rect
-{
-#warning TODO remove grid for preview (how?)
-    
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGContextSaveGState(context);
-    
-	CGContextSetRGBFillColor(context, 255, 255, 255, 1);
-    CGContextFillRect(context, self.bounds);
-    
-	if ([Settings getInstance].showGrid)
-		[Grid drawGridInContext:context inRect:self.bounds withScale:1.0f];
-    
-	CGContextRestoreGState(context);
-}
-
 - (void)reloadCanvasElements
 {
+#warning TODO remove grid for preview (how?)
+
+	for (UIView * v in self.subviews)
+		 [v removeFromSuperview];
+	
+	GridView * gridView = [[GridView alloc] initWithFrame:self.bounds];
+	[self addSubview:gridView];
+	
 	for (id element in self.canvas.elements)
 	{
 		if ([element isKindOfClass:[Element class]])

@@ -12,10 +12,10 @@
 
 - (NSString *)backgroudByOrientation
 {
-	NSString * backgroundFile = @"Default-Portrait";
+	NSString * backgroundFile = @"Background-Portrait";
 	UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
-		backgroundFile = @"Default-Landscape";
+		backgroundFile = @"Background-Landscape";
 
 	return backgroundFile;
 }

@@ -10,7 +10,8 @@
 
 @interface Grid : NSObject
 
-+ (void)drawGridInContext:(CGContextRef)context inRect:(CGRect)rect;
++ (void)drawGridInContext:(CGContextRef)context inRect:(CGRect)rect withScale:(CGFloat)scale;
 + (UIImage *)gridForRect:(CGRect)rect scale:(CGFloat)scale;
++ (void)flushBackgroundGridInFile:(NSString*)fileName rect:(CGRect)rect scale:(CGFloat)scale;
 
 @end

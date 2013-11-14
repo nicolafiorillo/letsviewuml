@@ -12,14 +12,6 @@ static CGFloat const kGridGridDistance	= 10.0f;
 
 @implementation Grid
 
-+ (UIImage *)gridForBackground
-{
-	CGRect frame = [UIScreen mainScreen].applicationFrame;
-	CGFloat scale = [UIScreen mainScreen].scale;
-
-	return [Grid gridForRect:frame scale:scale];
-}
-
 + (UIImage *)gridForRect:(CGRect)rect scale:(CGFloat)scale
 {
 	CGRect f = CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect), CGRectGetWidth(rect) * scale, CGRectGetHeight(rect) * scale);
@@ -27,7 +19,10 @@ static CGFloat const kGridGridDistance	= 10.0f;
 	UIGraphicsBeginImageContext(f.size);
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
-	[Grid drawGridInContext:context inRect:f];
+	CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
+	CGContextFillRect(context, f);
+
+	[Grid drawGridInContext:context inRect:f withScale:scale];
 
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
@@ -35,9 +30,9 @@ static CGFloat const kGridGridDistance	= 10.0f;
 	return image;
 }
 
-+ (void)flushBackgroundGridInFile:(NSString*)fileName
++ (void)flushBackgroundGridInFile:(NSString*)fileName rect:(CGRect)rect scale:(CGFloat)scale
 {
-	UIImage * i = [Grid gridForBackground];
+	UIImage * i = [Grid gridForRect:rect scale:scale];
 	NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *root = [paths objectAtIndex:0];
 
@@ -50,7 +45,8 @@ static CGFloat const kGridGridDistance	= 10.0f;
 
 + (void)flushGridRect:(CGRect)rect inFile:(NSString*)fileName
 {
-	UIImage * i = [Grid gridForRect:rect scale:1.0f];
+    CGFloat scale = [UIScreen mainScreen].scale;
+	UIImage * i = [Grid gridForRect:rect scale:scale];
 	
 	NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *root = [paths objectAtIndex:0];
@@ -62,7 +58,7 @@ static CGFloat const kGridGridDistance	= 10.0f;
 	[UIImagePNGRepresentation(i) writeToFile:filepathName atomically:YES];
 }
 
-+ (void)drawGridInContext:(CGContextRef)context inRect:(CGRect)rect
++ (void)drawGridInContext:(CGContextRef)context inRect:(CGRect)rect withScale:(CGFloat)scale
 {
 	CGContextSaveGState(context);
 
@@ -75,7 +71,7 @@ static CGFloat const kGridGridDistance	= 10.0f;
 		CGContextAddLineToPoint(context, x, CGRectGetHeight(rect));
 		CGContextStrokePath(context);
 
-		x = x + kGridGridDistance;
+		x = x + (kGridGridDistance * scale);
 	}
 
 	int y = 0;
@@ -85,7 +81,7 @@ static CGFloat const kGridGridDistance	= 10.0f;
 		CGContextAddLineToPoint(context, CGRectGetWidth(rect), y);
 		CGContextStrokePath(context);
 
-		y = y + kGridGridDistance;
+		y = y + (kGridGridDistance * scale);
 	}
 
 	CGContextRestoreGState(context);

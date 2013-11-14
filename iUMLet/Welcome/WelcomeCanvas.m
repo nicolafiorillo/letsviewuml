@@ -9,6 +9,7 @@
 #import "WelcomeCanvas.h"
 #import "Settings.h"
 #import "FileSystem.h"
+#import "Grid.h"
 
 static WelcomeCanvas * _welcomeCanvas = nil;
 static NSString * kWelcomeFileName = @"Welcome";
@@ -24,8 +25,14 @@ static NSString * kWelcomeFileExtension = @"uxf";
 	return _welcomeCanvas;
 }
 
-- (void) generate
+- (void)generate
 {
+//	generate background images
+//	[Grid flushBackgroundGridInFile:@"Launch-Portrait" rect:CGRectMake(0, 0, 768, 1024) scale:1.0f];
+//	[Grid flushBackgroundGridInFile:@"Launch-Landscape" rect:CGRectMake(0, 0, 1024, 768) scale:1.0f];
+//	[Grid flushBackgroundGridInFile:@"Launch-Portrait@2x" rect:CGRectMake(0, 0, 768, 1024) scale:2.0f];
+//	[Grid flushBackgroundGridInFile:@"Launch-Landscape@2x" rect:CGRectMake(0, 0, 1024, 768) scale:2.0f];
+    
 	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 	if ([[Settings getInstance] firstTimeForVersion:version])
 		[self addWelcomeCanvas];

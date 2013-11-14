@@ -57,7 +57,7 @@
     CGContextFillRect(context, self.bounds);
     
 	if ([Settings getInstance].showGrid)
-		[Grid drawGridInContext:context inRect:self.bounds];
+		[Grid drawGridInContext:context inRect:self.bounds withScale:1.0f];
     
 	CGContextRestoreGState(context);
 }

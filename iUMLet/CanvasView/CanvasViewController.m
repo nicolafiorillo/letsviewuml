@@ -135,11 +135,14 @@
 
 - (void)generatePreview
 {
-	CGFloat width = 210 * 2;
-	CGFloat height = 160 * 2;
+	CGFloat width = 210 * 3;
+	CGFloat height = 160 * 3;
 
-	CGPoint origin = self.canvas.topLeftElementOrigin;
-	CGRect frame = CGRectMake(origin.x - 20, origin.y - 20, width, height);	// full view: self.view.frame;
+//	CGPoint origin = self.canvas.topLeftElementOrigin;
+//	CGRect frame = CGRectMake(origin.x - 20, origin.y - 20, width, height);	// full view: self.view.frame;
+
+	CGPoint origin = self.scrollView.contentOffset;
+	CGRect frame = CGRectMake(origin.x, origin.y, width, height);	// full view: self.view.frame;
 
 	UIImage * image = [self imageByCropping:self.scrollView toRect:frame];
 	[self.previewCache saveCanvas:self.canvas asImage:image];

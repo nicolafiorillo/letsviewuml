@@ -53,7 +53,7 @@
 
 - (NSMutableArray *)loadAvailableItems
 {
-	NSLog(@"Should not pass here!");
+	NSLog(@"loadAvailableItems(): should not pass here!");
 	return nil;
 }
 

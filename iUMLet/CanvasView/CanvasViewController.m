@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Nicola Fiorillo. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "CanvasViewController.h"
 #import "CanvasView.h"
-#import <QuartzCore/QuartzCore.h>
 #import "Preview.h"
 
 @interface CanvasViewController () <UIScrollViewDelegate>
@@ -18,6 +18,7 @@
 @property (nonatomic)BOOL navigationBarHidden;
 @property (weak, nonatomic) IBOutlet UILabel *zoomLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notLoadableLabel;
+@property (strong, nonatomic)Preview * previewCache;
 
 @end
 
@@ -27,6 +28,14 @@
 {
 	_canvas = canvas;
 	_canvasView = [[CanvasView alloc] initWithCanvas:canvas];
+}
+
+- (Preview *)previewCache
+{
+	if (!_previewCache)
+		_previewCache = [Preview new];
+	
+	return _previewCache;
 }
 
 - (void)viewDidLoad
@@ -133,7 +142,7 @@
 	CGRect frame = CGRectMake(origin.x - 20, origin.y - 20, width, height);	// full view: self.view.frame;
 
 	UIImage * image = [self imageByCropping:self.scrollView toRect:frame];
-	[Preview saveForPreview:self.canvas image:image];
+	[self.previewCache saveCanvas:self.canvas asImage:image];
 }
 
 - (UIImage *)imageByCropping:(UIScrollView *)scrollView toRect:(CGRect)rect

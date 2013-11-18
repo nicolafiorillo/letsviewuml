@@ -7,6 +7,10 @@
 //
 
 #import "LocalRepository.h"
+#import "Settings.h"
+
+static NSString * kWelcomeFileName = @"Welcome";
+static NSString * kWelcomeFileExtension = @"uxf";
 
 @implementation LocalRepository
 
@@ -25,6 +29,7 @@
 	{
 		self.rootPath = rootPath;
 		self.name = [rootPath.pathComponents lastObject];
+		[self generateWelcomeCanvas];
 	}
 	
 	return self;
@@ -54,6 +59,34 @@
         NSLog(@"Error reading contents of documents directory: %@", [error localizedDescription]);
 
 	return items;
+}
+
+-(void)generateWelcomeCanvas
+{
+	//	generate background images
+	//	[Grid flushBackgroundGridInFile:@"Launch-Portrait" rect:CGRectMake(0, 0, 768, 1024) scale:1.0f];
+	//	[Grid flushBackgroundGridInFile:@"Launch-Landscape" rect:CGRectMake(0, 0, 1024, 768) scale:1.0f];
+	//	[Grid flushBackgroundGridInFile:@"Launch-Portrait@2x" rect:CGRectMake(0, 0, 768, 1024) scale:2.0f];
+	//	[Grid flushBackgroundGridInFile:@"Launch-Landscape@2x" rect:CGRectMake(0, 0, 1024, 768) scale:2.0f];
+    
+	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+	if ([[Settings getInstance] firstTimeForVersion:version])
+		[self addWelcomeCanvas];
+}
+
+- (void)addWelcomeCanvas
+{
+	NSString *welcomeFileName = [[NSBundle mainBundle] pathForResource:kWelcomeFileName ofType:kWelcomeFileExtension];
+	NSData *welcomeFileData = [NSData dataWithContentsOfFile:welcomeFileName];
+	if (welcomeFileData)
+	{
+		NSString * localFilePathName = [self.rootPath stringByAppendingPathComponent:kWelcomeFileName];
+		localFilePathName = [localFilePathName stringByAppendingPathExtension:kWelcomeFileExtension];
+		
+		NSFileManager * manager = [NSFileManager defaultManager];
+		if (manager != nil)
+			[welcomeFileData writeToFile:localFilePathName atomically:NO];
+	}
 }
 
 @end

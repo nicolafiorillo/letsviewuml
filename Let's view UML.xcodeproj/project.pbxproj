@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970286991839F1B4001689B9 /* Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 970286981839F1B4001689B9 /* Preview.m */; };
 		9718FB021834A4A2005FD538 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9718FB011834A4A2005FD538 /* GridView.m */; };
 		97296A351834300F00FBA1B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
 		9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
@@ -41,8 +42,6 @@
 		97F92B0418314FA6005B1EB1 /* CanvasLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B0018314FA6005B1EB1 /* CanvasLoader.m */; };
 		97F92B0518314FA6005B1EB1 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B0318314FA6005B1EB1 /* SMXMLDocument.m */; };
 		97F92B0A183150BB005B1EB1 /* Welcome.uxf in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B07183150BB005B1EB1 /* Welcome.uxf */; };
-		97F92B0B183150BB005B1EB1 /* WelcomeCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B08183150BB005B1EB1 /* WelcomeCanvas.m */; };
-		97F92B0F183150E3005B1EB1 /* Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B0D183150E3005B1EB1 /* Preview.m */; };
 		97F92B111831510F005B1EB1 /* NoPreview.xcf in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B101831510F005B1EB1 /* NoPreview.xcf */; };
 		97F92B131831514F005B1EB1 /* NoPreview.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B121831514F005B1EB1 /* NoPreview.png */; };
 		97FCF8CB1831FD21000F01A3 /* CanvasItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8C31831FD21000F01A3 /* CanvasItemCollectionViewCell.m */; };
@@ -56,7 +55,6 @@
 		97FCF8DC1831FD94000F01A3 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8D71831FD94000F01A3 /* settings.png */; };
 		97FCF8DF1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8DD1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m */; };
 		97FCF8E31831FE7D000F01A3 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E21831FE7D000F01A3 /* Grid.m */; };
-		97FCF8E71831FEB8000F01A3 /* FileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E61831FEB8000F01A3 /* FileSystem.m */; };
 		97FCF8ED1831FF08000F01A3 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E91831FF08000F01A3 /* CanvasView.m */; };
 		97FCF8EE1831FF08000F01A3 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */; };
 		97FCF8F41831FF85000F01A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8F01831FF85000F01A3 /* AppDelegate.m */; };
@@ -71,6 +69,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		970286971839F1B4001689B9 /* Preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preview.h; path = Preview/Preview.h; sourceTree = "<group>"; };
+		970286981839F1B4001689B9 /* Preview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preview.m; path = Preview/Preview.m; sourceTree = "<group>"; };
 		9718FB001834A4A2005FD538 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = CanvasView/GridView.h; sourceTree = "<group>"; };
 		9718FB011834A4A2005FD538 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = CanvasView/GridView.m; sourceTree = "<group>"; };
 		97296A341834300F00FBA1B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -131,10 +131,6 @@
 		97F92B0218314FA6005B1EB1 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMXMLDocument.h; path = XML/SMXMLDocument.h; sourceTree = "<group>"; };
 		97F92B0318314FA6005B1EB1 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMXMLDocument.m; path = XML/SMXMLDocument.m; sourceTree = "<group>"; };
 		97F92B07183150BB005B1EB1 /* Welcome.uxf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Welcome.uxf; path = Welcome/Welcome.uxf; sourceTree = "<group>"; };
-		97F92B08183150BB005B1EB1 /* WelcomeCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeCanvas.m; path = Welcome/WelcomeCanvas.m; sourceTree = "<group>"; };
-		97F92B09183150BB005B1EB1 /* WelcomeCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeCanvas.h; path = Welcome/WelcomeCanvas.h; sourceTree = "<group>"; };
-		97F92B0D183150E3005B1EB1 /* Preview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preview.m; path = Preview/Preview.m; sourceTree = "<group>"; };
-		97F92B0E183150E3005B1EB1 /* Preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preview.h; path = Preview/Preview.h; sourceTree = "<group>"; };
 		97F92B101831510F005B1EB1 /* NoPreview.xcf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NoPreview.xcf; path = Preview/NoPreview.xcf; sourceTree = "<group>"; };
 		97F92B121831514F005B1EB1 /* NoPreview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NoPreview.png; path = Preview/NoPreview.png; sourceTree = "<group>"; };
 		97FCF8C31831FD21000F01A3 /* CanvasItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvasItemCollectionViewCell.m; path = CanvasCollection/CanvasItemCollectionViewCell.m; sourceTree = "<group>"; };
@@ -157,8 +153,6 @@
 		97FCF8DE1831FE10000F01A3 /* UIViewController+BackgrounderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BackgrounderViewController.h"; path = "CanvasCollection/UIViewController+BackgrounderViewController.h"; sourceTree = "<group>"; };
 		97FCF8E11831FE7D000F01A3 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = Grid/Grid.h; sourceTree = "<group>"; };
 		97FCF8E21831FE7D000F01A3 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Grid/Grid.m; sourceTree = "<group>"; };
-		97FCF8E51831FEB8000F01A3 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystem.h; path = FileSystem/FileSystem.h; sourceTree = "<group>"; };
-		97FCF8E61831FEB8000F01A3 /* FileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileSystem.m; path = FileSystem/FileSystem.m; sourceTree = "<group>"; };
 		97FCF8E91831FF08000F01A3 /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvasView.m; path = CanvasView/CanvasView.m; sourceTree = "<group>"; };
 		97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvasViewController.m; path = CanvasView/CanvasViewController.m; sourceTree = "<group>"; };
 		97FCF8EB1831FF08000F01A3 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CanvasViewController.h; path = CanvasView/CanvasViewController.h; sourceTree = "<group>"; };
@@ -244,7 +238,6 @@
 				97FCF8C21831FD0E000F01A3 /* CanvasCollection */,
 				97FCF8E81831FEE8000F01A3 /* CanvasView */,
 				97F9754F1780A3A300EC90BE /* ElementsView */,
-				97FCF8E41831FEA3000F01A3 /* FileSystem */,
 				97FCF8E01831FE6C000F01A3 /* Grid */,
 				97702788175FC3B100CFB4DC /* Model */,
 				97F92B0C183150D5005B1EB1 /* Preview */,
@@ -252,7 +245,6 @@
 				97FCF90D18320157000F01A3 /* Storyboards */,
 				9770275D175FAFF500CFB4DC /* Supporting Files */,
 				973D754217A812E30030C2AD /* TestFlight */,
-				97F92B061831509C005B1EB1 /* Welcome */,
 				97702785175FC35E00CFB4DC /* XML */,
 				97296A341834300F00FBA1B6 /* Media.xcassets */,
 			);
@@ -289,6 +281,7 @@
 		97702788175FC3B100CFB4DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				97F92B07183150BB005B1EB1 /* Welcome.uxf */,
 				97F92AF418314F5A005B1EB1 /* Canvas.h */,
 				97F92AF518314F5A005B1EB1 /* Canvas.m */,
 				97F92AF818314F5A005B1EB1 /* Element.h */,
@@ -301,23 +294,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		97F92B061831509C005B1EB1 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				97F92B07183150BB005B1EB1 /* Welcome.uxf */,
-				97F92B09183150BB005B1EB1 /* WelcomeCanvas.h */,
-				97F92B08183150BB005B1EB1 /* WelcomeCanvas.m */,
-			);
-			name = Welcome;
-			sourceTree = "<group>";
-		};
 		97F92B0C183150D5005B1EB1 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
 				97F92B121831514F005B1EB1 /* NoPreview.png */,
 				97F92B101831510F005B1EB1 /* NoPreview.xcf */,
-				97F92B0E183150E3005B1EB1 /* Preview.h */,
-				97F92B0D183150E3005B1EB1 /* Preview.m */,
+				970286971839F1B4001689B9 /* Preview.h */,
+				970286981839F1B4001689B9 /* Preview.m */,
 			);
 			name = Preview;
 			sourceTree = "<group>";
@@ -406,15 +389,6 @@
 				97FCF8E21831FE7D000F01A3 /* Grid.m */,
 			);
 			name = Grid;
-			sourceTree = "<group>";
-		};
-		97FCF8E41831FEA3000F01A3 /* FileSystem */ = {
-			isa = PBXGroup;
-			children = (
-				97FCF8E51831FEB8000F01A3 /* FileSystem.h */,
-				97FCF8E61831FEB8000F01A3 /* FileSystem.m */,
-			);
-			name = FileSystem;
 			sourceTree = "<group>";
 		};
 		97FCF8E81831FEE8000F01A3 /* CanvasView */ = {
@@ -515,13 +489,13 @@
 			files = (
 				97FCF8F41831FF85000F01A3 /* AppDelegate.m in Sources */,
 				97F92AF018314EAB005B1EB1 /* PackageElementView.m in Sources */,
+				970286991839F1B4001689B9 /* Preview.m in Sources */,
 				97F92AE418314EAB005B1EB1 /* TextLine.m in Sources */,
 				97F92AED18314EAB005B1EB1 /* UseCaseElementView.m in Sources */,
 				97F92B0418314FA6005B1EB1 /* CanvasLoader.m in Sources */,
 				97F92AEA18314EAB005B1EB1 /* FinalStateElementView.m in Sources */,
 				97F92AF318314EAB005B1EB1 /* ThreeWayRelationElementView.m in Sources */,
 				97F92AFD18314F5A005B1EB1 /* Element.m in Sources */,
-				97FCF8E71831FEB8000F01A3 /* FileSystem.m in Sources */,
 				97F92AEE18314EAB005B1EB1 /* TextElementView.m in Sources */,
 				97F92AE718314EAB005B1EB1 /* ClassElementView.m in Sources */,
 				97FCF8E31831FE7D000F01A3 /* Grid.m in Sources */,
@@ -548,9 +522,7 @@
 				97F92AEB18314EAB005B1EB1 /* InitialStateElementView.m in Sources */,
 				97F92AE918314EAB005B1EB1 /* StateElementView.m in Sources */,
 				97F92B0518314FA6005B1EB1 /* SMXMLDocument.m in Sources */,
-				97F92B0F183150E3005B1EB1 /* Preview.m in Sources */,
 				97F92AFC18314F5A005B1EB1 /* Canvas.m in Sources */,
-				97F92B0B183150BB005B1EB1 /* WelcomeCanvas.m in Sources */,
 				9718FB021834A4A2005FD538 /* GridView.m in Sources */,
 				97FCF8DF1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m in Sources */,
 			);

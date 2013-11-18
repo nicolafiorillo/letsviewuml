@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Nicola Fiorillo. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "CanvasCollectionViewController.h"
 #import "CanvasItemCollectionViewCell.h"
 #import "GroupItemCollectionViewCell.h"
@@ -15,11 +16,11 @@
 #import "Grid.h"
 #import "Preview.h"
 #import "UIViewController+BackgrounderViewController.h"
-#import <QuartzCore/QuartzCore.h>
 
 @interface CanvasCollectionViewController () <CanvasViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *canvasCollectionView;
+@property (strong, nonatomic)Preview * previewCache;
 
 @end
 
@@ -57,6 +58,14 @@
 	return _canvasRepository;
 }
 
+- (Preview *)previewCache
+{
+	if (!_previewCache)
+		_previewCache = [Preview new];
+	
+	return _previewCache;
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 	return 1;
@@ -83,7 +92,7 @@
 
 			Canvas * canvas = (Canvas *)i;
 			item.name = canvas.name;
-			item.preview = [Preview loadPreview:canvas];
+			item.preview = [self.previewCache loadForCanvas:canvas];
 
 			[item setNeedsDisplay];
 		}

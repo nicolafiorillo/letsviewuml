@@ -97,7 +97,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 		CATiledLayer * thisTiledLayer = (CATiledLayer *)self.layer;
 		thisTiledLayer.levelsOfDetail = 4;
 		thisTiledLayer.levelsOfDetailBias = 4;
-
+		
 		self.opaque = NO;
 		
 		self.boundingRect = CGRectMake(CGRectGetMinX(self.bounds) + 0.1f, CGRectGetMinY(self.bounds) + 0.1f, CGRectGetWidth(self.bounds) - 0.2f, CGRectGetHeight(self.bounds) - 0.2f);

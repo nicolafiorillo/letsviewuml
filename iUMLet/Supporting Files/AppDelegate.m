@@ -8,14 +8,12 @@
 
 #import "AppDelegate.h"
 #import "ExternalKeys.h"
-#import "WelcomeCanvas.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	[TestFlight takeOff:kTestFlightKey];
-	[[WelcomeCanvas getInstance] generate];
 
 	// Override point for customization after application launch.
     return YES;

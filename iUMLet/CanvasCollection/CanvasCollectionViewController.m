@@ -21,6 +21,7 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *canvasCollectionView;
 @property (strong, nonatomic)Preview * previewCache;
+@property (strong, nonatomic)NSMutableDictionary * canvasControllerCache;	// NSString -> CanvasViewController
 
 @end
 
@@ -56,6 +57,14 @@
 		_canvasRepository = [LocalRepository createLocalRepository];
 
 	return _canvasRepository;
+}
+
+- (NSMutableDictionary *)canvasControllerCache
+{
+	if (!_canvasControllerCache)
+		_canvasControllerCache = [NSMutableDictionary new];
+	
+	return _canvasControllerCache;
 }
 
 - (Preview *)previewCache
@@ -111,6 +120,24 @@
 	return cell;
 }
 
+- (CanvasViewController *)getCachedCanvasController:(Canvas*)canvas indexPath:(NSIndexPath*)indexPath
+{
+	CanvasViewController * controller = [self.canvasControllerCache objectForKey:canvas.fullPath];
+	if (controller != nil)
+		return controller;
+
+	controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CanvasDiagram"];
+	controller.canvas = canvas;
+	
+	controller.title = canvas.name;
+	controller.indexPath = indexPath;
+	controller.delegate = self;
+
+	[self.canvasControllerCache setObject:controller forKey:canvas.fullPath];
+	
+	return controller;
+}
+
 - (void)tapGesture:(UITapGestureRecognizer *)gesture
 {
 	CGPoint tapLocation = [gesture locationInView:self.canvasCollectionView];
@@ -125,13 +152,7 @@
 
 			if (canvas)
 			{
-				CanvasViewController * canvasViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CanvasDiagram"];
-				canvasViewController.canvas = canvas;
-
-				canvasViewController.title = canvas.name;
-				canvasViewController.indexPath = indexPath;
-				canvasViewController.delegate = self;
-
+				CanvasViewController * canvasViewController = [self getCachedCanvasController:canvas indexPath:indexPath];
 				[self.navigationController pushViewController:canvasViewController animated:YES];
 			}
 		}

@@ -99,7 +99,7 @@ static CGFloat const kPackageElementBodyBottomSpace		= 2.4f;
 {
 	CGContextFillRect(context, self.headerRect);
 
-	CGMutablePathRef	 path = CGPathCreateMutable();
+	CGMutablePathRef path = CGPathCreateMutable();
 
 	CGPathMoveToPoint(path, NULL, CGRectGetMinX(self.boundingRect), CGRectGetMinY(self.boundingRect) + CGRectGetHeight(self.headerRect));
 	CGPathAddLineToPoint(path, NULL, CGRectGetMinX(self.boundingRect), CGRectGetMinY(self.boundingRect));
@@ -151,10 +151,6 @@ static CGFloat const kPackageElementBodyBottomSpace		= 2.4f;
 
 	CGContextFillRect(context, self.bodyRect);
 	CGContextStrokeRect(context, self.bodyRect);
-
-	CGContextSetFillColorWithColor(context, [self.foregroundColor CGColor]);
-
-// 	CGContextStrokeRect(context, self.bodyTextRect);
 
 	if (self.bodyLines.count > 0)
 	{

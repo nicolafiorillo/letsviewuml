@@ -57,7 +57,7 @@ static CGFloat const kClassElementActiveSpace = 8.0f;
 
 	if (self.activeClass)
 	{
-		CGMutablePathRef	 path = CGPathCreateMutable();
+		CGMutablePathRef path = CGPathCreateMutable();
 
 		CGPathMoveToPoint(path, NULL, CGRectGetMinX(self.boundingRect) + self.activeSpace, CGRectGetMinY(self.boundingRect));
 		CGPathAddLineToPoint(path, NULL, CGRectGetMinX(self.boundingRect) + self.activeSpace, CGRectGetMinY(self.boundingRect) + CGRectGetHeight(self.boundingRect));

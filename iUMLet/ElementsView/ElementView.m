@@ -100,7 +100,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 		
 		self.opaque = NO;
 		
-		self.boundingRect = CGRectMake(CGRectGetMinX(self.bounds) + 0.1f, CGRectGetMinY(self.bounds) + 0.1f, CGRectGetWidth(self.bounds) - 0.2f, CGRectGetHeight(self.bounds) - 0.2f);
+		self.boundingRect = CGRectIntegral(self.bounds);
 
 		[self resetFont];
 		self.additionalAttributesPoints = [ElementView splitAsPoints:self.element.additional_attributes];
@@ -281,10 +281,10 @@ CGFloat const kElementViewLineWidth						= 1.0f;
     CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
 
     CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, 15, &matrix);
-    NSDictionary * attributesDictionaryTitle = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, nil];
+    NSDictionary * attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, (id)[self.foregroundColor CGColor], kCTForegroundColorAttributeName, nil];
     NSString * text = [NSString stringWithFormat:@"%s", [textLine printable]];
 
-    NSAttributedString * attrString = [[NSAttributedString alloc]initWithString:text attributes:attributesDictionaryTitle];
+    NSAttributedString * attrString = [[NSAttributedString alloc]initWithString:text attributes:attributesDictionary];
     CTLineRef line = CTLineCreateWithAttributedString((CFAttributedStringRef)attrString);
 
 	CGContextSetTextDrawingMode(context, kCGTextFill);

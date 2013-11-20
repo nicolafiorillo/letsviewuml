@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Lets View UML" default="releasebuild" basedir=".">
+
+	<description>Lets View UML build file.</description>
+	<property name="src" location="." />
+	<property name="build" location="build" />
+	<property name="project" location="Let's view UML.xcodeproj" />
+
+	<macrodef name="xcodebuild">
+		<attribute name="project" />
+		<attribute name="configuration" />
+		<attribute name="action" default="build" />
+		<sequential>
+			<echo message="Command xcodebuild -project &quot;@{project}&quot; -configuration @{configuration} @{action}" />
+			<exec executable="xcodebuild">
+				<arg value="-project" />
+				<arg value="@{project}" />
+				<arg value="-configuration" />
+				<arg value="@{configuration}" />
+				<arg value="@{action}" />
+			</exec>
+		</sequential>
+	</macrodef>
+
+	<target name="init">
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="releasebuild" depends="init" description="Building release version">
+		<xcodebuild project="${project}" configuration="Release"/>
+	</target>
+
+</project>

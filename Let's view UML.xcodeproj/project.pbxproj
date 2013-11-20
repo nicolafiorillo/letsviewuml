@@ -17,6 +17,7 @@
 		9770275B175FAFF500CFB4DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9770275A175FAFF500CFB4DC /* CoreGraphics.framework */; };
 		97702761175FAFF500CFB4DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9770275F175FAFF500CFB4DC /* InfoPlist.strings */; };
 		97702773175FAFF500CFB4DC /* iPad.Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97702771175FAFF500CFB4DC /* iPad.Storyboard.storyboard */; };
+		97AE8AA5183C901000ED4C02 /* build.xml in Resources */ = {isa = PBXBuildFile; fileRef = 97AE8AA4183C901000ED4C02 /* build.xml */; };
 		97F92AC018314C1A005B1EB1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F92ABE18314C1A005B1EB1 /* libTestFlight.a */; };
 		97F92AE318314EAB005B1EB1 /* ElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC118314EAB005B1EB1 /* ElementView.m */; };
 		97F92AE418314EAB005B1EB1 /* TextLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC218314EAB005B1EB1 /* TextLine.m */; };
@@ -82,6 +83,7 @@
 		9770275A175FAFF500CFB4DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97702760175FAFF500CFB4DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97702772175FAFF500CFB4DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.Storyboard.storyboard; sourceTree = "<group>"; };
+		97AE8AA4183C901000ED4C02 /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
 		97F92ABE18314C1A005B1EB1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = libs/libTestFlight.a; sourceTree = "<group>"; };
 		97F92ABF18314C1A005B1EB1 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = libs/TestFlight.h; sourceTree = "<group>"; };
 		97F92AC118314EAB005B1EB1 /* ElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElementView.m; path = ElementsView/ElementView.m; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				9770275C175FAFF500CFB4DC /* Let's view UML */,
 				97702755175FAFF500CFB4DC /* Frameworks */,
 				97702754175FAFF500CFB4DC /* Products */,
+				97AE8AA4183C901000ED4C02 /* build.xml */,
 				97FCF910183201F1000F01A3 /* LICENSE */,
 				97FCF911183201F1000F01A3 /* README.md */,
 			);
@@ -471,6 +474,7 @@
 				97FCF8DC1831FD94000F01A3 /* settings.png in Resources */,
 				97702773175FAFF500CFB4DC /* iPad.Storyboard.storyboard in Resources */,
 				97FEA8691833E389005CF9DC /* Background-Portrait.png in Resources */,
+				97AE8AA5183C901000ED4C02 /* build.xml in Resources */,
 				97FEA8721833E519005CF9DC /* Background-Landscape.png in Resources */,
 				97FCF912183201F1000F01A3 /* LICENSE in Resources */,
 				97F92B0A183150BB005B1EB1 /* Welcome.uxf in Resources */,

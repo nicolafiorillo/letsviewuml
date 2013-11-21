@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="Lets View UML" default="releasebuild" basedir=".">
+<project name="Lets View UML" default="builddebug" basedir=".">
 
 	<description>Lets View UML build file.</description>
 	<property name="src" location="." />
@@ -27,7 +27,19 @@
 		<mkdir dir="${build}" />
 	</target>
 
-	<target name="releasebuild" depends="init" description="Building release version">
+	<target name="cleandebug" depends="init" description="Cleaning debug version">
+		<xcodebuild project="${project}" configuration="Debug" action="clean"/>
+	</target>
+
+	<target name="cleanrelease" depends="init" description="Cleaning release version">
+		<xcodebuild project="${project}" configuration="Release" action="clean"/>
+	</target>
+
+	<target name="builddebug" depends="cleandebug" description="Building debug version">
+		<xcodebuild project="${project}" configuration="Debug" action="build"/>
+	</target>
+
+	<target name="buildrelease" depends="cleanrelease" description="Building release version">
 		<xcodebuild project="${project}" configuration="Release"/>
 	</target>
 

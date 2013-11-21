@@ -7,17 +7,32 @@
 	<property name="build" location="build" />
 	<property name="project" location="Let's view UML.xcodeproj" />
 
+	<macrodef name="agvtool">
+		<attribute name="operation" default="next-version"/>
+		<attribute name="all" default="-all"/>
+		<sequential>
+			<echo message="Command agvtool @{operation} @{all}" />
+			<exec executable="agvtool">
+				<arg value="@{operation}" />
+				<arg value="@{all}" />
+			</exec>
+		</sequential>
+	</macrodef>
+
 	<macrodef name="xcodebuild">
 		<attribute name="project" />
 		<attribute name="configuration" />
+		<attribute name="scheme" default="Let's view UML" />
 		<attribute name="action" default="build" />
 		<sequential>
-			<echo message="Command xcodebuild -project &quot;@{project}&quot; -configuration @{configuration} @{action}" />
+			<echo message="Command xcodebuild -project &quot;@{project}&quot; -configuration @{configuration} -scheme @{scheme} @{action}" />
 			<exec executable="xcodebuild">
 				<arg value="-project" />
 				<arg value="@{project}" />
 				<arg value="-configuration" />
 				<arg value="@{configuration}" />
+				<arg value="-scheme" />
+				<arg value="@{scheme}" />
 				<arg value="@{action}" />
 			</exec>
 		</sequential>
@@ -41,6 +56,14 @@
 
 	<target name="buildrelease" depends="cleanrelease" description="Building release version">
 		<xcodebuild project="${project}" configuration="Release"/>
+	</target>
+
+	<target name="archive" depends="updateversion" description="Building archive version">
+		<xcodebuild project="${project}" configuration="Release" action="archive" scheme="Let's view UML"/>
+	</target>
+
+	<target name="updateversion" description="Updating app version number">
+		<agvtool />
 	</target>
 
 </project>

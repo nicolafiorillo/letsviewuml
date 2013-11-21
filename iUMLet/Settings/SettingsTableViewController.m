@@ -61,10 +61,11 @@
 	else if ([segue.identifier isEqualToString:@"ToAbout"]) {
 		InfoViewController * destinationController = segue.destinationViewController;
 
-		NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+		NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+		NSString * bundle = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 		NSString * appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
-		destinationController.text = [NSString stringWithFormat:kAppAbout, appName, version];
+		destinationController.text = [NSString stringWithFormat:kAppAbout, appName, version, bundle];
 		destinationController.title = @"About this app";
 	}
 }

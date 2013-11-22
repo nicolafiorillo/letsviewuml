@@ -358,7 +358,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
 			[self drawText:textLine inContext:context atX:x atY:y];
 		}
-	}
+	}	// malloc_error_break
 
 	CGContextRestoreGState(context);
 }

@@ -36,7 +36,8 @@
 {
 	UIScreen * screen = [UIScreen mainScreen];
 
-	CGRect screenRect = CGRectMake(0, 0, CGRectGetWidth(screen.applicationFrame), CGRectGetHeight(screen.applicationFrame));
+	CGFloat maxSide = MAX(CGRectGetWidth(screen.bounds), CGRectGetHeight(screen.bounds));
+	CGRect screenRect = CGRectMake(0, 0, maxSide, maxSide);
 	CGRect dimension = canvas.isLoaded ? [self calculateDimensionsFor:canvas.dimension screenDimension:screenRect] : screenRect;
 
 	self = [super initWithFrame:dimension];

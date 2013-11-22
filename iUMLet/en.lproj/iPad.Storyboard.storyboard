@@ -245,7 +245,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="557" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-UX-OgO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="557" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-UX-OgO">
                                 <rect key="frame" x="105" y="475" width="557" height="75"/>
                                 <string key="text">diagram not loadable:
 unknown format or unreadable version</string>
@@ -256,11 +256,12 @@ unknown format or unreadable version</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rO5-3F-aaa" firstAttribute="top" secondItem="v6I-Cm-ZuI" secondAttribute="top" id="4V2-wJ-hJO"/>
-                            <constraint firstAttribute="trailing" secondItem="rO5-3F-aaa" secondAttribute="trailing" id="bhz-FV-d5b"/>
-                            <constraint firstAttribute="bottom" secondItem="rO5-3F-aaa" secondAttribute="bottom" id="gNX-mJ-BmR"/>
-                            <constraint firstItem="rO5-3F-aaa" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" id="jf9-rr-26d"/>
-                            <constraint firstItem="rO5-3F-aaa" firstAttribute="centerY" secondItem="HEF-UX-OgO" secondAttribute="centerY" id="rqh-q2-qOw"/>
+                            <constraint firstItem="rO5-3F-aaa" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" id="44k-up-vZt"/>
+                            <constraint firstItem="HEF-UX-OgO" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" constant="105" id="HOg-9p-j1b"/>
+                            <constraint firstItem="HEF-UX-OgO" firstAttribute="centerY" secondItem="rO5-3F-aaa" secondAttribute="centerY" id="OFG-0t-dUT"/>
+                            <constraint firstAttribute="trailing" secondItem="rO5-3F-aaa" secondAttribute="trailing" id="XBP-ZE-p4w"/>
+                            <constraint firstAttribute="bottom" secondItem="rO5-3F-aaa" secondAttribute="bottom" id="hoY-RO-dIZ"/>
+                            <constraint firstItem="rO5-3F-aaa" firstAttribute="top" secondItem="v6I-Cm-ZuI" secondAttribute="top" id="oFz-4p-L1L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rVB-os-wgG"/>

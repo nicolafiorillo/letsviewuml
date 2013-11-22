@@ -257,6 +257,7 @@ unknown format or unreadable version</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rO5-3F-aaa" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" id="44k-up-vZt"/>
+                            <constraint firstAttribute="centerX" secondItem="HEF-UX-OgO" secondAttribute="centerX" id="6dL-UW-omA"/>
                             <constraint firstItem="HEF-UX-OgO" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" constant="105" id="HOg-9p-j1b"/>
                             <constraint firstItem="HEF-UX-OgO" firstAttribute="centerY" secondItem="rO5-3F-aaa" secondAttribute="centerY" id="OFG-0t-dUT"/>
                             <constraint firstAttribute="trailing" secondItem="rO5-3F-aaa" secondAttribute="trailing" id="XBP-ZE-p4w"/>

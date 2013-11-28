@@ -239,13 +239,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-3F-aaa">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </scrollView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="zoom: xxx%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWz-f0-CS7">
-                                <rect key="frame" x="549" y="964" width="199" height="40"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="32"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="557" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-UX-OgO">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="557" translatesAutoresizingMaskIntoConstraints="NO" id="HEF-UX-OgO">
                                 <rect key="frame" x="105" y="475" width="557" height="75"/>
                                 <string key="text">diagram not loadable:
 unknown format or unreadable version</string>
@@ -253,16 +247,21 @@ unknown format or unreadable version</string>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="zoom: xxx%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWz-f0-CS7">
+                                <rect key="frame" x="549" y="964" width="199" height="40"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="32"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rO5-3F-aaa" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" id="44k-up-vZt"/>
-                            <constraint firstAttribute="centerX" secondItem="HEF-UX-OgO" secondAttribute="centerX" id="6dL-UW-omA"/>
-                            <constraint firstItem="HEF-UX-OgO" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" constant="105" id="HOg-9p-j1b"/>
-                            <constraint firstItem="HEF-UX-OgO" firstAttribute="centerY" secondItem="rO5-3F-aaa" secondAttribute="centerY" id="OFG-0t-dUT"/>
-                            <constraint firstAttribute="trailing" secondItem="rO5-3F-aaa" secondAttribute="trailing" id="XBP-ZE-p4w"/>
-                            <constraint firstAttribute="bottom" secondItem="rO5-3F-aaa" secondAttribute="bottom" id="hoY-RO-dIZ"/>
-                            <constraint firstItem="rO5-3F-aaa" firstAttribute="top" secondItem="v6I-Cm-ZuI" secondAttribute="top" id="oFz-4p-L1L"/>
+                            <constraint firstAttribute="centerY" secondItem="HEF-UX-OgO" secondAttribute="centerY" id="gvo-Y7-8ko"/>
+                            <constraint firstAttribute="centerX" secondItem="HEF-UX-OgO" secondAttribute="centerX" id="k8C-kQ-Fp4"/>
+                            <constraint firstAttribute="trailing" secondItem="rO5-3F-aaa" secondAttribute="trailing" id="mAB-Nd-LtJ"/>
+                            <constraint firstItem="rO5-3F-aaa" firstAttribute="leading" secondItem="v6I-Cm-ZuI" secondAttribute="leading" id="md3-Eu-1QR"/>
+                            <constraint firstAttribute="bottom" secondItem="rO5-3F-aaa" secondAttribute="bottom" id="o0P-os-fcD"/>
+                            <constraint firstItem="rO5-3F-aaa" firstAttribute="top" secondItem="v6I-Cm-ZuI" secondAttribute="top" id="vUj-2d-bNf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rVB-os-wgG"/>

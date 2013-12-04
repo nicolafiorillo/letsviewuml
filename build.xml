@@ -22,7 +22,7 @@
 	<macrodef name="xcodebuild">
 		<attribute name="project" />
 		<attribute name="configuration" />
-		<attribute name="scheme" default="Let's view UML" />
+		<attribute name="scheme" />
 		<attribute name="action" default="build" />
 		<sequential>
 			<echo message="Command xcodebuild -project &quot;@{project}&quot; -configuration @{configuration} -scheme @{scheme} @{action}" />

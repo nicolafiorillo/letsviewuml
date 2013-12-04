@@ -12,6 +12,8 @@
 		97296A351834300F00FBA1B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
 		9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
 		973D754717A813820030C2AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 973D754617A813820030C2AD /* libz.dylib */; };
+		976595FF184F00FB00ADA423 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 976595FD184F00FB00ADA423 /* iTunesArtwork.png */; };
+		97659600184F00FB00ADA423 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 976595FE184F00FB00ADA423 /* iTunesArtwork@2x.png */; };
 		97702757175FAFF500CFB4DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702756175FAFF500CFB4DC /* UIKit.framework */; };
 		97702759175FAFF500CFB4DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702758175FAFF500CFB4DC /* Foundation.framework */; };
 		9770275B175FAFF500CFB4DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9770275A175FAFF500CFB4DC /* CoreGraphics.framework */; };
@@ -77,6 +79,8 @@
 		97296A341834300F00FBA1B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9736BFF9176C477A0041964B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		973D754617A813820030C2AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		976595FD184F00FB00ADA423 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = iTunes/iTunesArtwork.png; sourceTree = "<group>"; };
+		976595FE184F00FB00ADA423 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "iTunes/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		97702753175FAFF500CFB4DC /* Let's view UML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's view UML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97702756175FAFF500CFB4DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97702758175FAFF500CFB4DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,6 +206,15 @@
 			name = TestFlight;
 			sourceTree = "<group>";
 		};
+		976595F7184EFE6800ADA423 /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				976595FD184F00FB00ADA423 /* iTunesArtwork.png */,
+				976595FE184F00FB00ADA423 /* iTunesArtwork@2x.png */,
+			);
+			name = iTunes;
+			sourceTree = "<group>";
+		};
 		9770274A175FAFF500CFB4DC = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +251,7 @@
 		9770275C175FAFF500CFB4DC /* Let's view UML */ = {
 			isa = PBXGroup;
 			children = (
+				976595F7184EFE6800ADA423 /* iTunes */,
 				97FCF8C21831FD0E000F01A3 /* CanvasCollection */,
 				97FCF8E81831FEE8000F01A3 /* CanvasView */,
 				97F9754F1780A3A300EC90BE /* ElementsView */,
@@ -443,6 +457,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nicola Fiorillo";
+				TargetAttributes = {
+					97702752175FAFF500CFB4DC = {
+						DevelopmentTeam = DAKLZJ97S7;
+					};
+				};
 			};
 			buildConfigurationList = 9770274E175FAFF500CFB4DC /* Build configuration list for PBXProject "Let's view UML" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -470,8 +489,10 @@
 				97FCF913183201F1000F01A3 /* README.md in Resources */,
 				97296A351834300F00FBA1B6 /* Media.xcassets in Resources */,
 				97FEA8711833E519005CF9DC /* Background-Landscape@2x.png in Resources */,
+				97659600184F00FB00ADA423 /* iTunesArtwork@2x.png in Resources */,
 				97702761175FAFF500CFB4DC /* InfoPlist.strings in Resources */,
 				97FCF8DC1831FD94000F01A3 /* settings.png in Resources */,
+				976595FF184F00FB00ADA423 /* iTunesArtwork.png in Resources */,
 				97702773175FAFF500CFB4DC /* iPad.Storyboard.storyboard in Resources */,
 				97FEA8691833E389005CF9DC /* Background-Portrait.png in Resources */,
 				97AE8AA5183C901000ED4C02 /* build.xml in Resources */,
@@ -627,6 +648,7 @@
 		9770277A175FAFF500CFB4DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -651,6 +673,7 @@
 		9770277B175FAFF500CFB4DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

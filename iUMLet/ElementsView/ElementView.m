@@ -336,30 +336,36 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 	CGContextSetStrokeColorWithColor(context, [self.foregroundColor CGColor]);
 	CGContextSetFillColorWithColor(context, [self.foregroundColor CGColor]);
 
-	for (TextLine * textLine in self.text)
+	NSMutableArray * textLines = self.text;
+	if (textLines == nil)
+		NSLog(@"Error: textLines is null");
+	else
 	{
-		if (textLine.isSeparator)
+		for (TextLine * textLine in textLines)
 		{
-			yOffset += self.fontSeparatorSpace;
-			
-			CGContextMoveToPoint(context, 0, yOffset);
-			CGContextAddLineToPoint(context, CGRectGetWidth(self.boundingRect), yOffset);
-			CGContextStrokePath(context);
+			if (textLine.isSeparator)
+			{
+				yOffset += self.fontSeparatorSpace;
+				
+				CGContextMoveToPoint(context, 0, yOffset);
+				CGContextAddLineToPoint(context, CGRectGetWidth(self.boundingRect), yOffset);
+				CGContextStrokePath(context);
 
-			centerHorizontally = NO;
-		}
-		else
-		{
-			float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontLeftSpace;
-			float y = centerVertically ? self.fontSize + ((CGRectGetHeight(self.boundingRect) - textLine.textSize.height) / 2) : self.fontSize + self.fontUpperSpace;
+				centerHorizontally = NO;
+			}
+			else
+			{
+				float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontLeftSpace;
+				float y = centerVertically ? self.fontSize + ((CGRectGetHeight(self.boundingRect) - textLine.textSize.height) / 2) : self.fontSize + self.fontUpperSpace;
 
-			y += yOffset;
-			yOffset = y;
+				y += yOffset;
+				yOffset = y;
 
-			[self drawText:textLine inContext:context atX:x atY:y];
-		}
-	}	// malloc_error_break
-
+				[self drawText:textLine inContext:context atX:x atY:y];
+			}
+		}	// malloc_error_break
+	}
+	
 	CGContextRestoreGState(context);
 }
 

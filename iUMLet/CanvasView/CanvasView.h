@@ -12,6 +12,7 @@
 @interface CanvasView : UIView
 
 @property (strong, nonatomic)Canvas *canvas;
+@property (nonatomic)BOOL showGrid;
 
 - (id)initWithCanvas:(Canvas *)canvas;
 

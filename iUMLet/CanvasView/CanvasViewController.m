@@ -38,6 +38,12 @@
 	return _previewCache;
 }
 
+- (void)setShowGrid:(BOOL)showGrid
+{
+	if (self.canvasView && self.canvas)
+		self.canvasView.showGrid = showGrid;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

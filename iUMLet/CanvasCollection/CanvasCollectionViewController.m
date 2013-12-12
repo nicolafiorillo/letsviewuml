@@ -16,6 +16,7 @@
 #import "Grid.h"
 #import "Preview.h"
 #import "UIViewController+BackgrounderViewController.h"
+#import "Settings.h"
 
 @interface CanvasCollectionViewController () <CanvasViewControllerDelegate>
 
@@ -153,6 +154,8 @@
 			if (canvas)
 			{
 				CanvasViewController * canvasViewController = [self getCachedCanvasController:canvas indexPath:indexPath];
+				canvasViewController.showGrid = [Settings getInstance].showGrid;
+					
 				[self.navigationController pushViewController:canvasViewController animated:YES];
 			}
 		}

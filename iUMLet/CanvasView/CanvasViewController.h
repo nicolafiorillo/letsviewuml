@@ -13,8 +13,9 @@
 
 @interface CanvasViewController : UIViewController
 
-@property	(strong, nonatomic)Canvas *canvas;
+@property (strong, nonatomic)Canvas *canvas;
 @property (nonatomic)NSIndexPath * indexPath;
+@property (nonatomic)BOOL showGrid;
 
 @property (weak, nonatomic)id<CanvasViewControllerDelegate> delegate;
 

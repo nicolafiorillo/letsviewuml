@@ -22,6 +22,15 @@
 	[self reloadCanvasElements];
 }
 
+- (void)setShowGrid:(BOOL)showGrid
+{
+	if (self.canvas)
+	{
+		GridView * gridView = (GridView *)self.subviews.firstObject;
+		gridView.hidden = !showGrid;
+	}
+}
+
 - (CGRect)calculateDimensionsFor:(CGRect)realDimension screenDimension:(CGRect)screenDimension
 {
 	CGFloat width = MAX(CGRectGetWidth(realDimension), CGRectGetWidth(screenDimension));

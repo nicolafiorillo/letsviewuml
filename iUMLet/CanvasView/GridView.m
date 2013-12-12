@@ -9,7 +9,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GridView.h"
 #import "Grid.h"
-#import "Settings.h"
 
 @implementation GridView
 
@@ -17,6 +16,7 @@
 {
 	return [CATiledLayer class];
 }
+
 -(id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -39,8 +39,7 @@
 	CGContextSetFillColorWithColor(context, [[UIColor whiteColor] CGColor]);
     CGContextFillRect(context, self.bounds);
     
-	if ([Settings getInstance].showGrid)
-		[Grid drawGridInContext:context inRect:self.bounds withScale:1.0f];
+	[Grid drawGridInContext:context inRect:self.bounds withScale:1.0f];
 
 	CGContextRestoreGState(context);
 }

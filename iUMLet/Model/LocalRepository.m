@@ -70,7 +70,7 @@ static NSString * kWelcomeFileExtension = @"uxf";
 	//	[Grid flushBackgroundGridInFile:@"Launch-Landscape@2x" rect:CGRectMake(0, 0, 1024, 768) scale:2.0f];
     
 	//	log available fonts
-	[self logFontsToFile:@"Font.txt"];
+	//	[self logFontsToFile:@"Font.txt"];
 
 	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 	if ([[Settings getInstance] firstTimeForVersion:version])

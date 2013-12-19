@@ -25,8 +25,8 @@ CGFloat const kGenericItemCollectionViewCellTitleDistance			= 20.0f;
 CGFloat const kGenericItemCollectionViewCellLineWidth				= 1.0f;
 CGFloat const kGenericItemCollectionViewCellLeftSpace				= 10.0f;
 
-static NSString * const kGenericItemCollectionViewCellFontName		= @"TrebuchetMS";
-static CGFloat const kGenericItemCollectionViewCellFontSize         = 15.0f;
+static NSString * const kGenericItemCollectionViewCellFontName		= @"LucidaGrande";
+static CGFloat const kGenericItemCollectionViewCellFontSize         = 16.0f;
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -47,7 +47,7 @@ static CGFloat const kGenericItemCollectionViewCellFontSize         = 15.0f;
         
         CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
         
-        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)kGenericItemCollectionViewCellFontName, 15, &matrix);
+        CTFontRef fontRef = CTFontCreateWithName((CFStringRef)kGenericItemCollectionViewCellFontName, kGenericItemCollectionViewCellFontSize, &matrix);
         self.attributesDictionaryTitle = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, nil];
 	}
 

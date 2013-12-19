@@ -69,6 +69,9 @@ static NSString * kWelcomeFileExtension = @"uxf";
 	//	[Grid flushBackgroundGridInFile:@"Launch-Portrait@2x" rect:CGRectMake(0, 0, 768, 1024) scale:2.0f];
 	//	[Grid flushBackgroundGridInFile:@"Launch-Landscape@2x" rect:CGRectMake(0, 0, 1024, 768) scale:2.0f];
     
+	//	log available fonts
+	[self logFontsToFile:@"Font.txt"];
+
 	NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 	if ([[Settings getInstance] firstTimeForVersion:version])
 		[self addWelcomeCanvas];
@@ -86,6 +89,27 @@ static NSString * kWelcomeFileExtension = @"uxf";
 		NSFileManager * manager = [NSFileManager defaultManager];
 		if (manager != nil)
 			[welcomeFileData writeToFile:localFilePathName atomically:NO];
+	}
+}
+
+- (void)logFontsToFile:(NSString*) fileName
+{
+	NSString * content = @"";
+	
+	NSArray * familyNames = [[UIFont familyNames] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+	for (NSString * familyName in familyNames)
+	{
+		content = [content stringByAppendingFormat:@"\r%@\r", familyName];
+		NSArray * fonts = [UIFont fontNamesForFamilyName:familyName];
+		for (NSString * font in fonts)
+			content = [content stringByAppendingFormat:@"    %@\r", font];
+	}
+	
+	NSFileManager * manager = [NSFileManager defaultManager];
+	if (manager != nil)
+	{
+		NSString * localFilePathName = [self.rootPath stringByAppendingPathComponent:fileName];
+		[manager createFileAtPath:localFilePathName contents:[content dataUsingEncoding:NSUnicodeStringEncoding] attributes:nil];
 	}
 }
 

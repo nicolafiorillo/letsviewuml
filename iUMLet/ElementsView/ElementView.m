@@ -11,16 +11,18 @@
 #import "NSString+NSStringLib.h"
 #import <QuartzCore/QuartzCore.h>
 
-static NSString * const kElementViewFontName			= @"TrebuchetMS";
-static NSString * const kElementViewFontNameBold		= @"TrebuchetMS-Bold";
+static NSString * const kElementViewFontName			= @"LucidaGrande";
+static NSString * const kElementViewFontNameBold		= @"LucidaGrande-Bold";
+#warning TODO: move to LucidaGrande for italic
 static NSString * const kElementViewFontNameItalic		= @"TrebuchetMS-Italic";
 static NSString * const kElementViewFontNameBoldItalic	= @"Trebuchet-BoldItalic";
 
-static CGFloat const kElementViewFontSize				= 15.0f;
+static CGFloat const kElementViewFontSize				= 14.0f;
 static CGFloat const kElementViewFontUpperSpace			= 2.0f;
 static CGFloat const kElementViewFontFromBottomSpace	= 6.0f;
 static CGFloat const kElementViewFontSeparatorSpace		= 3.0f;
 static CGFloat const kElementViewFontLeftSpace			= 8.0f;
+
 static CGFloat const kElementViewUnderscoreSpace		= 0.7f;
 static CGFloat const kElementViewBackgroundAlpha		= 0.55f;
 
@@ -207,6 +209,8 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
 - (void)resetFont
 {
+#warning TODO: refactoring to static properties
+	
 	self.fontSize = kElementViewFontSize * self.scaleFactor;
 	self.fontUpperSpace = kElementViewFontUpperSpace * self.scaleFactor;
 	self.fontFromBottomSpace = kElementViewFontFromBottomSpace * self.scaleFactor;
@@ -280,7 +284,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
     CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
 
-    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, 15, &matrix);
+    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, self.fontSize, &matrix);
     NSDictionary * attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, (id)[self.foregroundColor CGColor], kCTForegroundColorAttributeName, nil];
     NSString * text = [NSString stringWithFormat:@"%s", [textLine printable]];
 

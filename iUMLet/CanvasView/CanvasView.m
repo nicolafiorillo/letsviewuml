@@ -60,8 +60,6 @@
 
 - (void)reloadCanvasElements
 {
-#warning TODO remove grid for preview (how?)
-
 	for (UIView * v in self.subviews)
 		 [v removeFromSuperview];
 	

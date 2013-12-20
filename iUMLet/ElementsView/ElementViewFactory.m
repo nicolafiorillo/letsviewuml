@@ -34,17 +34,17 @@ static NSDictionary * elementMap;
 	{
 		elementMap =
 		@{
-			@"com.umlet.element.Class":							[ClassElementView class],
-			@"com.umlet.element.Relation":						[RelationElementView class],
-			@"com.umlet.element.UseCase":							[UseCaseElementView class],
-			@"com.umlet.element.custom.Text":					[TextElementView class],
-			@"com.umlet.element.Note":							[NoteElementView class],
-			@"com.umlet.element.Actor":							[ActorElementView class],
-			@"com.umlet.element.Package":							[PackageElementView class],
-			@"com.umlet.element.Interface":						[InterfaceElementView class],
-			@"com.umlet.element.custom.ThreeWayRelation":		[ThreeWayRelationElementView class],
-			@"com.umlet.element.custom.State":					[StateElementView class],
-			@"com.umlet.element.custom.InitialState":			[InitialStateElementView class],
+			@"com.umlet.element.Class":						[ClassElementView class],
+			@"com.umlet.element.Relation":					[RelationElementView class],
+			@"com.umlet.element.UseCase":					[UseCaseElementView class],
+			@"com.umlet.element.custom.Text":				[TextElementView class],
+			@"com.umlet.element.Note":						[NoteElementView class],
+			@"com.umlet.element.Actor":						[ActorElementView class],
+			@"com.umlet.element.Package":					[PackageElementView class],
+			@"com.umlet.element.Interface":					[InterfaceElementView class],
+			@"com.umlet.element.custom.ThreeWayRelation":	[ThreeWayRelationElementView class],
+			@"com.umlet.element.custom.State":				[StateElementView class],
+			@"com.umlet.element.custom.InitialState":		[InitialStateElementView class],
 			@"com.umlet.element.custom.FinalState":			[FinalStateElementView class]
 		};
 	}
@@ -52,12 +52,12 @@ static NSDictionary * elementMap;
 	return elementMap;
 }
 
-+ (ElementView *)createWithElement:(Element *)element andZoomLevel:(NSInteger)zoomLevel
++ (ElementView *)createWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoomLevel:(NSInteger)zoomLevel
 {
 	ElementView * view = nil;
 
 	if ([self.map objectForKey:element.type] != nil)
-		view = [[[self.map objectForKey:element.type] alloc] initWithElement:(Element *)element andZoom:zoomLevel];
+		view = [[[self.map objectForKey:element.type] alloc] initWithElement:(Element *)element fontGeometry:fontGeometry zoom:zoomLevel];
 
 	return view;
 }

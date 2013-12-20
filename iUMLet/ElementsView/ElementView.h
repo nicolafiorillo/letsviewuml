@@ -10,32 +10,27 @@
 #import <CoreText/CoreText.h>
 #import "Element.h"
 #import "TextLine.h"
+#import "FontGeometry.h"
 
 extern CGFloat const kElementViewLineWidth;
 
-static CGFloat const dashedLengths[]	 = { 10, 4 };
-static size_t const dashedLengthsSize = sizeof(dashedLengths) / sizeof(float);
+static CGFloat const dashedLengths[]	= { 10, 4 };
+static size_t const dashedLengthsSize	= sizeof(dashedLengths) / sizeof(float);
 
 @interface ElementView : UIView
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom;
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom;
 
 @property (nonatomic)CGRect boundingRect;
 
-@property (nonatomic)CGFloat fontSize;
-@property (nonatomic)CGFloat fontUpperSpace;
-@property (nonatomic)CGFloat fontFromBottomSpace;
-@property (nonatomic)CGFloat fontSeparatorSpace;
-@property (nonatomic)CGFloat fontLeftSpace;
-@property (nonatomic)CGFloat underscoreSpace;
-
 @property (strong, nonatomic)Element * element;
-@property (nonatomic)NSInteger zoomLevel;
 @property (nonatomic)CGFloat scaleFactor;
-@property	(strong, nonatomic, readonly)NSMutableArray * additionalAttributesPoints;
-@property	(strong, nonatomic, readonly)NSMutableArray * text;
-@property	(strong, nonatomic, readonly)UIColor * backgroundColor;
-@property	(strong, nonatomic, readonly)UIColor * foregroundColor;
+
+@property (strong, nonatomic, readonly)NSMutableArray * additionalAttributesPoints;
+@property (strong, nonatomic, readonly)NSMutableArray * text;
+@property (strong, nonatomic, readonly)UIColor * backgroundColor;
+@property (strong, nonatomic, readonly)UIColor * foregroundColor;
+@property (strong, nonatomic)FontGeometry * fontGeometry;
 
 @property (strong, nonatomic)NSString * lt;
 @property (strong, nonatomic)NSString * bt;

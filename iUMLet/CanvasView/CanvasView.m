@@ -13,6 +13,7 @@
 #import "Grid.h"
 #import "Settings.h"
 #import "GridView.h"
+#import "FontGeometry.h"
 
 @implementation CanvasView
 
@@ -67,11 +68,13 @@
 	GridView * gridView = [[GridView alloc] initWithFrame:self.bounds];
 	[self addSubview:gridView];
 	
+	FontGeometry * fontGeometry = [[FontGeometry alloc] initWithZoom:self.canvas.zoomLevel];
+	
 	for (id element in self.canvas.elements)
 	{
 		if ([element isKindOfClass:[Element class]])
 		{
-			ElementView * newView = [ElementViewFactory createWithElement:(Element *)element andZoomLevel:self.canvas.zoomLevel];
+			ElementView * newView = [ElementViewFactory createWithElement:(Element *)element fontGeometry:fontGeometry zoomLevel:self.canvas.zoomLevel];
 
 			if (newView != nil)
 				[self addSubview:newView];

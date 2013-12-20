@@ -24,9 +24,9 @@ static CGFloat const kAngleRay = 16.0f;
 	return [CATiledLayer class];
 }
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 
 	if (self)
 	{
@@ -70,7 +70,7 @@ static CGFloat const kAngleRay = 16.0f;
 	{
 		if (textLine.isSeparator)
 		{
-			yOffset += self.fontSeparatorSpace;
+			yOffset += self.fontGeometry.fontSeparatorSpace;
 
 			CGContextMoveToPoint(context, 0, yOffset);
 			CGContextAddLineToPoint(context, CGRectGetWidth(self.boundingRect), yOffset);
@@ -80,8 +80,7 @@ static CGFloat const kAngleRay = 16.0f;
 		}
 		else if (textLine.isDashedSeparator)
 		{
-#warning 8.0?!?
-			yOffset += self.fontSeparatorSpace;// + (8.0f * self.scaleFactor);
+			yOffset += self.fontGeometry.fontSeparatorSpace;
 
 			CGContextSaveGState(context);
 
@@ -95,8 +94,8 @@ static CGFloat const kAngleRay = 16.0f;
 		}
 		else
 		{
-			float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontLeftSpace;
-			float y = self.fontSize + self.fontUpperSpace;
+			float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontGeometry.fontLeftSpace;
+			float y = self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 			y += yOffset;
 			yOffset = y;

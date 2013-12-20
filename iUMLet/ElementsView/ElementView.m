@@ -11,19 +11,6 @@
 #import "NSString+NSStringLib.h"
 #import <QuartzCore/QuartzCore.h>
 
-static NSString * const kElementViewFontName			= @"LucidaGrande";
-static NSString * const kElementViewFontNameBold		= @"LucidaGrande-Bold";
-#warning TODO: move to LucidaGrande for italic
-static NSString * const kElementViewFontNameItalic		= @"TrebuchetMS-Italic";
-static NSString * const kElementViewFontNameBoldItalic	= @"Trebuchet-BoldItalic";
-
-static CGFloat const kElementViewFontSize				= 14.0f;
-static CGFloat const kElementViewFontUpperSpace			= 2.0f;
-static CGFloat const kElementViewFontFromBottomSpace	= 6.0f;
-static CGFloat const kElementViewFontSeparatorSpace		= 3.0f;
-static CGFloat const kElementViewFontLeftSpace			= 8.0f;
-
-static CGFloat const kElementViewUnderscoreSpace		= 0.7f;
 static CGFloat const kElementViewBackgroundAlpha		= 0.55f;
 
 static CGFloat const kElementViewArrowDim				= 8.0f;
@@ -33,10 +20,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
 @interface ElementView()
 
-@property (strong, nonatomic)UIFont * font;
-@property (strong, nonatomic)UIFont * fontBold;
-@property (strong, nonatomic)UIFont * fontItalic;
-@property (strong, nonatomic)UIFont * fontBoldItalic;
+@property (nonatomic)NSInteger zoomLevel;
 
 @property (strong, nonatomic)UIColor * backgroundColor;
 @property (strong, nonatomic)UIColor * foregroundColor;
@@ -88,14 +72,16 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 	return _text;
 }
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	_element = element;
-	_zoomLevel = zoom;
-	
     self = [super initWithFrame:element.coordinates];
 
 	if (self) {
+
+		self.element = element;
+		self.zoomLevel = zoom;
+		self.fontGeometry = fontGeometry;
+
 		CATiledLayer * thisTiledLayer = (CATiledLayer *)self.layer;
 		thisTiledLayer.levelsOfDetail = 4;
 		thisTiledLayer.levelsOfDetailBias = 4;
@@ -104,7 +90,6 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 		
 		self.boundingRect = CGRectIntegral(self.bounds);
 
-		[self resetFont];
 		self.additionalAttributesPoints = [ElementView splitAsPoints:self.element.additional_attributes];
 
 		[self readPanelAttributes];
@@ -135,21 +120,21 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 				else if ([line isActive])
 					self.activeClass = YES;
 				else if ([line isM1])
-					self.m1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.m1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isM2])
-					self.m2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.m2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isR1])
-					self.r1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.r1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isR2])
-					self.r2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.r2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isQ1])
-					self.q1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.q1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isQ2])
-					self.q2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.q2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isP1])
-					self.p1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.p1 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isP2])
-					self.p2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.font andStyle:FontStyleNone];
+					self.p2 = [TextLine text:[line substringFromIndex:3] inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:FontStyleNone];
 				else if ([line isLine])
 					[self.text addObject:[TextLine separator]];
 				else if ([line isDashedLine])
@@ -189,39 +174,16 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 						}
 					}
 
-					[self.text addObject:[TextLine text:cleanedLine inRect:self.boundingRect.size withFont:self.font andStyle:style]];
+					[self.text addObject:[TextLine text:cleanedLine inRect:self.boundingRect.size withFont:self.fontGeometry.font andStyle:style]];
 				}
 			}
 		}
 	}
 }
 
-- (void)setZoomLevel:(NSInteger)zoomLevel
-{
-	_zoomLevel = zoomLevel;
-	[self resetFont];
-}
-
 - (CGFloat)scaleFactor
 {
 	return self.zoomLevel / 10.0;
-}
-
-- (void)resetFont
-{
-#warning TODO: refactoring to static properties
-	
-	self.fontSize = kElementViewFontSize * self.scaleFactor;
-	self.fontUpperSpace = kElementViewFontUpperSpace * self.scaleFactor;
-	self.fontFromBottomSpace = kElementViewFontFromBottomSpace * self.scaleFactor;
-	self.fontSeparatorSpace = kElementViewFontSeparatorSpace * self.scaleFactor;
-	self.fontLeftSpace = kElementViewFontLeftSpace * self.scaleFactor;
-	self.underscoreSpace = kElementViewUnderscoreSpace * self.scaleFactor;
-
-	self.font = [UIFont fontWithName:kElementViewFontName size:self.fontSize];
-	self.fontBold = [UIFont fontWithName:kElementViewFontNameBold size:self.fontSize];
-	self.fontItalic = [UIFont fontWithName:kElementViewFontNameItalic size:self.fontSize];
-	self.fontBoldItalic = [UIFont fontWithName:kElementViewFontNameBoldItalic size:self.fontSize];
 }
 
 + (NSMutableArray *)splitAsPoints:(NSString *)coordinates
@@ -245,14 +207,14 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
 - (const char *)fontNameByStyle:(FontStyle)style
 {
-	const char * fontName = [self.font.fontName UTF8String];
+	const char * fontName = [self.fontGeometry.font.fontName UTF8String];
 
 	if ((style & FontStyleBold) && (style & FontStyleItalic))
-		fontName = [self.fontBoldItalic.fontName UTF8String];
+		fontName = [self.fontGeometry.fontBoldItalic.fontName UTF8String];
 	else if (style & FontStyleBold)
-		fontName = [self.fontBold.fontName UTF8String];
+		fontName = [self.fontGeometry.fontBold.fontName UTF8String];
 	else if (style & FontStyleItalic)
-		fontName = [self.fontItalic.fontName UTF8String];
+		fontName = [self.fontGeometry.fontItalic.fontName UTF8String];
 
 	return fontName;
 }
@@ -284,7 +246,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
     CGAffineTransform matrix = CGAffineTransformMakeScale(1.0, -1.0);
 
-    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, self.fontSize, &matrix);
+    CTFontRef fontRef = CTFontCreateWithName((CFStringRef)fontName, self.fontGeometry.fontSize, &matrix);
     NSDictionary * attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:(id)CFBridgingRelease(fontRef), (NSString*)kCTFontAttributeName, (id)[self.foregroundColor CGColor], kCTForegroundColorAttributeName, nil];
     NSString * text = [NSString stringWithFormat:@"%s", [textLine printable]];
 
@@ -306,7 +268,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 
 	if (textLine.fontStyle & FontStyleUnderscore)
 	{
-		CGFloat space = y + self.underscoreSpace;
+		CGFloat space = y + self.fontGeometry.underscoreSpace;
 
 		CGContextMoveToPoint(context, x, space);
 		CGContextAddLineToPoint(context, x + textLine.textSize.width, space);
@@ -317,7 +279,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 - (void)drawText:(TextLine *)textLine inContext:(CGContextRef)context centerAtPoint:(CGPoint)point
 {
 	CGFloat origX = point.x - (textLine.textSize.width / 2);
-	CGFloat origY = point.y + (textLine.textSize.height / 2) - (textLine.textSize.height - self.fontSize);
+	CGFloat origY = point.y + (textLine.textSize.height / 2) - (textLine.textSize.height - self.fontGeometry.fontSize);
 
 	[self drawText:textLine inContext:context atX:origX atY:origY];
 }
@@ -334,7 +296,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 {
 	int yOffset = 0;
 	if (lineAt > 0)
-		yOffset =	lineAt - self.fontSize - self.fontFromBottomSpace;
+		yOffset = lineAt - self.fontGeometry.fontSize - self.fontGeometry.fontFromBottomSpace;
 
 	CGContextSaveGState(context);
 	CGContextSetStrokeColorWithColor(context, [self.foregroundColor CGColor]);
@@ -349,7 +311,7 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 		{
 			if (textLine.isSeparator)
 			{
-				yOffset += self.fontSeparatorSpace;
+				yOffset += self.fontGeometry.fontSeparatorSpace;
 				
 				CGContextMoveToPoint(context, 0, yOffset);
 				CGContextAddLineToPoint(context, CGRectGetWidth(self.boundingRect), yOffset);
@@ -359,8 +321,8 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 			}
 			else
 			{
-				float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontLeftSpace;
-				float y = centerVertically ? self.fontSize + ((CGRectGetHeight(self.boundingRect) - textLine.textSize.height) / 2) : self.fontSize + self.fontUpperSpace;
+				float x = centerHorizontally ? (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2 : self.fontGeometry.fontLeftSpace;
+				float y = centerVertically ? self.fontGeometry.fontSize + ((CGRectGetHeight(self.boundingRect) - textLine.textSize.height) / 2) : self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 				y += yOffset;
 				yOffset = y;

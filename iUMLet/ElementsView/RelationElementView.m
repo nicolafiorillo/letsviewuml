@@ -124,9 +124,9 @@ static CGFloat const kRelationElementArrowWingAngle				= 27 * M_PI / 180;
 	return kRelationElementArrowWingLength * self.scaleFactor;
 }
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 
 	if (self)
 	{
@@ -680,7 +680,7 @@ static CGFloat const kRelationElementArrowWingAngle				= 27 * M_PI / 180;
 	if (self.r1 != nil)
 		offset += self.r1.textSize.width + self.accessorSpaceffset;
 
-	[self drawAccessoryText:self.p1 inContext:context p1:pa p2:pb xOffset:offset yOffset:-self.fontSize];
+	[self drawAccessoryText:self.p1 inContext:context p1:pa p2:pb xOffset:offset yOffset:-self.fontGeometry.fontSize];
 
 	CGPoint pv = [(NSValue*)points[points.count - 2] CGPointValue];
 	CGPoint pz = [(NSValue*)points[points.count - 1] CGPointValue];
@@ -697,7 +697,7 @@ static CGFloat const kRelationElementArrowWingAngle				= 27 * M_PI / 180;
 	if (self.r2 != nil)
 		offset += self.r2.textSize.width + self.accessorSpaceffset;
 
-	[self drawAccessoryText:self.p2 inContext:context p1:pz p2:pv xOffset:offset yOffset:-self.fontSize];
+	[self drawAccessoryText:self.p2 inContext:context p1:pz p2:pv xOffset:offset yOffset:-self.fontGeometry.fontSize];
 }
 
 @end

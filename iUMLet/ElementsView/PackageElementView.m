@@ -36,14 +36,14 @@
 
 static CGFloat const kPackageElementHeaderMinHeight		= 20.0f;
 static CGFloat const kPackageElementHeaderLeftSpace		= 7.0f;
-static CGFloat const kPackageElementHeaderRightSpace		= 11.0f;
-static CGFloat const kPackageElementHeaderUpperSpace		= 2.4f;
+static CGFloat const kPackageElementHeaderRightSpace	= 11.0f;
+static CGFloat const kPackageElementHeaderUpperSpace	= 2.4f;
 static CGFloat const kPackageElementHeaderBottomSpace	= 4.7f;
 static CGFloat const kPackageElementBodyBottomSpace		= 2.4f;
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 
 	if (self)
 	{
@@ -77,7 +77,7 @@ static CGFloat const kPackageElementBodyBottomSpace		= 2.4f;
 
 		[self.headerLines addObject:textLine];
 
-		float y = self.fontSize + self.headerUpperSpace;
+		float y = self.fontGeometry.fontSize + self.headerUpperSpace;
 
 		currentWidth = MAX(currentWidth, textLine.textSize.width + self.headerRightSpace);
 
@@ -136,7 +136,7 @@ static CGFloat const kPackageElementBodyBottomSpace		= 2.4f;
 			if (separatorFound)
 			{
 				[self.bodyLines addObject:textLine];
-				totalHeight += self.fontSize;// textLine.textSize.height;
+				totalHeight += self.fontGeometry.fontSize;// textLine.textSize.height;
 			}
 		}
 	}

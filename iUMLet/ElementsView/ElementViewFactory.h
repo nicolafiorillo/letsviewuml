@@ -11,6 +11,6 @@
 
 @interface ElementViewFactory : NSObject
 
-+ (ElementView *)createWithElement:(Element *)element andZoomLevel:(NSInteger)zoomLevel;
++ (ElementView *)createWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoomLevel:(NSInteger)zoomLevel;
 
 @end

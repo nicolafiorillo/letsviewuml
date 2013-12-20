@@ -24,9 +24,9 @@ static CGFloat const kNoteElementFlapLength = 14.0f;
 	return [CATiledLayer class];
 }
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 
 	if (self)
 	{
@@ -86,8 +86,8 @@ static CGFloat const kNoteElementFlapLength = 14.0f;
 
 	for (TextLine * textLine in self.text)
 	{
-		float x = self.fontLeftSpace;
-		float y = self.fontSize + self.fontUpperSpace;
+		float x = self.fontGeometry.fontLeftSpace;
+		float y = self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 		y += yOffset;
 		yOffset = y;

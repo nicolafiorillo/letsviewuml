@@ -26,9 +26,9 @@
 static CGFloat const kInterfaceElementCircleRay	= 10.0f;
 static CGFloat const kInterfaceElementLineSpace	= 5.0f;
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 
 	if (self)
 	{
@@ -78,7 +78,7 @@ static CGFloat const kInterfaceElementLineSpace	= 5.0f;
 		else
 		{
 			float x = (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2;
-			float y = self.fontSize + self.fontUpperSpace;
+			float y = self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 			y += yOffset;
 			yOffset = y;

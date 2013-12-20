@@ -53,8 +53,8 @@
 
 	for (TextLine * textLine in self.text)
 	{
-		float x = self.fontLeftSpace;
-		float y = self.fontSize + self.fontUpperSpace;
+		float x = self.fontGeometry.fontLeftSpace;
+		float y = self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 		y += yOffset;
 		yOffset = y;

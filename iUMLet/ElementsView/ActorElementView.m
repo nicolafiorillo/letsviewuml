@@ -22,14 +22,14 @@
 
 @end
 
-static CGFloat const kActorElementMaxHeight		= 70.0f;
-static CGFloat const kActorElementTextDistance	= 10.0f;
+static CGFloat const kActorElementMaxHeight			= 70.0f;
+static CGFloat const kActorElementTextDistance		= 10.0f;
 static CGFloat const kActorElementHeadRay			= 7.0f;
 static CGFloat const kActorElementBodyLenght		= 24.0f;
 static CGFloat const kActorElementShoulderLenght	= 18.0f;
-static CGFloat const kActorElementArmLenght		= 28.0f;
-static CGFloat const kActorElementFootDistance	= 36.0f;
-static CGFloat const kActorElementLineDistance	= 6.0f;
+static CGFloat const kActorElementArmLenght			= 28.0f;
+static CGFloat const kActorElementFootDistance		= 36.0f;
+static CGFloat const kActorElementLineDistance		= 6.0f;
 
 @implementation ActorElementView
 
@@ -38,9 +38,9 @@ static CGFloat const kActorElementLineDistance	= 6.0f;
 	return [CATiledLayer class];
 }
 
-- (id)initWithElement:(Element *)element andZoom:(NSInteger)zoom
+- (id)initWithElement:(Element *)element fontGeometry:(FontGeometry *)fontGeometry zoom:(NSInteger)zoom
 {
-	self = [super initWithElement:element andZoom:zoom];
+	self = [super initWithElement:element fontGeometry:fontGeometry zoom:zoom];
 	if (self)
 	{
 		self.manHeight = kActorElementMaxHeight * self.scaleFactor;
@@ -114,7 +114,7 @@ static CGFloat const kActorElementLineDistance	= 6.0f;
 		else
 		{
 			float x = (CGRectGetWidth(self.boundingRect) - textLine.textSize.width) / 2;
-			float y = self.fontSize + self.fontUpperSpace;
+			float y = self.fontGeometry.fontSize + self.fontGeometry.fontUpperSpace;
 
 			y += yOffset;
 			yOffset = y;

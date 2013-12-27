@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ExternalKeys.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 

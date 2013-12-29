@@ -71,6 +71,8 @@
 	tapRecognizer.cancelsTouchesInView = NO;
 	[self.scrollView addGestureRecognizer:tapRecognizer];
 
+	[self.scrollView flashScrollIndicators];
+	
 	[self showAndHideNavBar];
 	[self setAndHideZoom];
 }

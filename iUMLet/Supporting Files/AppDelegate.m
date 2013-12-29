@@ -9,13 +9,18 @@
 #import "AppDelegate.h"
 #import "ExternalKeys.h"
 #import "TestFlight.h"
+#import "Debug.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[TestFlight takeOff:kTestFlightKey];
-
+	if (!AmIBeingDebugged())
+	{
+		[TestFlight takeOff:kTestFlightKey];
+		NSLog(@"TestFlight is active");
+	}
+	
 	// Override point for customization after application launch.
     return YES;
 }

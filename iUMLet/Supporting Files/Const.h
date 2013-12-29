@@ -9,8 +9,8 @@
 #ifndef Let_s_view_UML_Const_h
 #define Let_s_view_UML_Const_h
 
-static const size_t kLevelsOfDetail = 2;
-static const size_t kLevelsOfDetailBias = 2;
+static const size_t kLevelsOfDetail = 8;
+static const size_t kLevelsOfDetailBias = 8;
 
 static const CGFloat kScrollViewZoomScale = 1.0;
 static const CGFloat kScrollViewMinimumZoomScale = 1.0;

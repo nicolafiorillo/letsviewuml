@@ -10,6 +10,7 @@
 #import "Element.h"
 #import "NSString+NSStringLib.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Const.h"
 
 static CGFloat const kElementViewBackgroundAlpha		= 0.55f;
 
@@ -83,8 +84,8 @@ CGFloat const kElementViewLineWidth						= 1.0f;
 		self.fontGeometry = fontGeometry;
 
 		CATiledLayer * thisTiledLayer = (CATiledLayer *)self.layer;
-		thisTiledLayer.levelsOfDetail = 4;
-		thisTiledLayer.levelsOfDetailBias = 4;
+		thisTiledLayer.levelsOfDetail = kLevelsOfDetail;
+		thisTiledLayer.levelsOfDetailBias = kLevelsOfDetailBias;
 		
 		self.opaque = NO;
 		

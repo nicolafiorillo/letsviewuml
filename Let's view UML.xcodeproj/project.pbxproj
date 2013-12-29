@@ -95,6 +95,7 @@
 		979D9299186E25E50012B34F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = "<group>"; };
 		979D92A2186E2DD60012B34F /* LucidaGrande.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = LucidaGrande.ttc; path = CanvasView/LucidaGrande.ttc; sourceTree = "<group>"; };
 		97AE8AA4183C901000ED4C02 /* build.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = build.xml; sourceTree = "<group>"; };
+		97C17513186F11CF003D8564 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Const.h; path = "Supporting Files/Const.h"; sourceTree = "<group>"; };
 		97F92AC118314EAB005B1EB1 /* ElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ElementView.m; path = ElementsView/ElementView.m; sourceTree = "<group>"; };
 		97F92AC218314EAB005B1EB1 /* TextLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextLine.m; path = ElementsView/TextLine.m; sourceTree = "<group>"; };
 		97F92AC318314EAB005B1EB1 /* RelationElementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RelationElementView.m; path = ElementsView/RelationElementView.m; sourceTree = "<group>"; };
@@ -285,6 +286,7 @@
 				97FCF8F11831FF85000F01A3 /* Let's view UML-Info.plist */,
 				97FCF8EF1831FF85000F01A3 /* Let's view UML-Prefix.pch */,
 				97FCF8F31831FF85000F01A3 /* main.m */,
+				97C17513186F11CF003D8564 /* Const.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

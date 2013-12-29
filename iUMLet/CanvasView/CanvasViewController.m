@@ -10,6 +10,7 @@
 #import "CanvasViewController.h"
 #import "CanvasView.h"
 #import "Preview.h"
+#import "Const.h"
 
 @interface CanvasViewController () <UIScrollViewDelegate>
 
@@ -48,9 +49,9 @@
 {
     [super viewDidLoad];
 
-	self.scrollView.zoomScale = 1.0;
-	self.scrollView.minimumZoomScale = 1.0;
-	self.scrollView.maximumZoomScale = 8.0;
+	self.scrollView.zoomScale = kScrollViewZoomScale;
+	self.scrollView.minimumZoomScale = kScrollViewMinimumZoomScale;
+	self.scrollView.maximumZoomScale = kScrollViewMaximumZoomScale;
 	self.scrollView.alwaysBounceHorizontal = YES;
 	self.scrollView.alwaysBounceVertical = YES;
 

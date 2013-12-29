@@ -272,7 +272,7 @@ static CGFloat const kRelationElementArrowWingAngle				= 27 * M_PI / 180;
 
 	CGContextSetLineWidth(context, kElementViewLineWidth);
 
-	NSArray * points = self.additionalAttributesPoints;
+	NSMutableArray * points = self.additionalAttributesPoints;
 
 	if (points.count > 0)
 	{

@@ -666,7 +666,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nicola Fiorillo (473M62839C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nicola Fiorillo (473M62839C)";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
 				INFOPLIST_FILE = "iUMLet/Supporting Files/Let's view UML-Info.plist";
@@ -694,7 +694,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nicola Fiorillo (473M62839C)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nicola Fiorillo (473M62839C)";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
 				INFOPLIST_FILE = "iUMLet/Supporting Files/Let's view UML-Info.plist";

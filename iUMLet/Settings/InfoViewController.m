@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad
 {
+	[super viewDidLoad];
+	
 	self.infoWebView.delegate = self;
 	[self.infoWebView loadHTMLString:self.text baseURL:nil];
 	

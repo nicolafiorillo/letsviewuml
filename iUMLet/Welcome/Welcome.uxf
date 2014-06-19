@@ -16,12 +16,11 @@
     <type>com.umlet.element.custom.Text</type>
     <coordinates>
       <x>40</x>
-      <y>220</y>
+      <y>260</y>
       <w>260</w>
-      <h>50</h>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>*Version 1.0*
-Support for the following elements:
+    <panel_attributes>Support for the following elements:
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -938,6 +937,19 @@ bg=cyan</panel_attributes>
     </coordinates>
     <panel_attributes>#3c7a00
 bg=#3c7a00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Text</type>
+    <coordinates>
+      <x>40</x>
+      <y>190</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Version 1.0*
+Load your diagrams through iTunes.
+</panel_attributes>
     <additional_attributes/>
   </element>
   <group>

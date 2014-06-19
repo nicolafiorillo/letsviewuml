@@ -15,6 +15,6 @@ NSString * kAppLicense = @"<html style='font-family:Helvetica, sans-serif'><p st
 
 NSString * kAppCredits = @"<html style='font-family:Helvetica, sans-serif'><p  style='font-weight: bold;'>SMXMLDocument</p><p>The MIT License - Copyright (c) 2011 Spotlight Mobile</p><p>https://github.com/nfarina/xmldocument</p></html>";
 
-NSString * kAppAbout = @"<html style='font-family:Helvetica, sans-serif'><p style='font-weight: bold;'>%@</p><p>Version: %@.%@</p><p>This is a UMLet diagrams viewer for iPad but it is an independent project.</p><p>Official project site: http://www.letsviewuml.com</p><p>For source code, bugs or enhancement requests refer to <a href='https://github.com/nicolafiorillo/letsviewuml'>GitHub project site</a></p></html>";
+NSString * kAppAbout = @"<html style='font-family:Helvetica, sans-serif'><p style='font-weight: bold;'>%@</p><p>Version: %@.%@</p><p>This is a UMLet diagrams viewer for iPad but it is an independent project.</p><p>Official project site: http://www.letsviewuml.com</p><p>For source code, bugs or enhancement requests refer to <a href='https://github.com/nicolafiorillo/letsviewuml'>GitHub project site</a></p><p>Author: Nicola Fiorillo (<a href='http://www.nicolafiorillo.coml'>www.nicolafiorillo.com</a>)</p></html>";
 
 #endif

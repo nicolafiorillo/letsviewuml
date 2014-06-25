@@ -27,7 +27,7 @@ static CGFloat const kElementViewUnderscoreSpace		= 0.7f;
 {
 	self = [super init];
 	
-	CGFloat scaleFactor = zoom / 10;
+	CGFloat scaleFactor = zoom / 10.0;
 	
 	if (self)
 	{

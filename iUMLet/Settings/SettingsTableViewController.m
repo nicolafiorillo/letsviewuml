@@ -65,7 +65,7 @@
 		NSString * bundle = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 		NSString * appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
-		destinationController.text = [NSString stringWithFormat:kAppAbout, appName, version, bundle];
+		destinationController.text = [NSString stringWithFormat:kAppAbout, appName, version, bundle, appName];
 		destinationController.title = @"About this app";
 	}
 }

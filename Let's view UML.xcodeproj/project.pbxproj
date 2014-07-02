@@ -8,6 +8,72 @@
 
 /* Begin PBXBuildFile section */
 		970286991839F1B4001689B9 /* Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 970286981839F1B4001689B9 /* Preview.m */; };
+		970E440B19640F2D00F7D53A /* iPhone.Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E440A19640F2D00F7D53A /* iPhone.Storyboard.storyboard */; };
+		970E440E1964115000F7D53A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8F01831FF85000F01A3 /* AppDelegate.m */; };
+		970E440F1964115000F7D53A /* PackageElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD418314EAB005B1EB1 /* PackageElementView.m */; };
+		970E44101964115000F7D53A /* Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 970286981839F1B4001689B9 /* Preview.m */; };
+		970E44111964115000F7D53A /* TextLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC218314EAB005B1EB1 /* TextLine.m */; };
+		970E44121964115000F7D53A /* UseCaseElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD118314EAB005B1EB1 /* UseCaseElementView.m */; };
+		970E44131964115000F7D53A /* CanvasLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B0018314FA6005B1EB1 /* CanvasLoader.m */; };
+		970E44141964115000F7D53A /* FinalStateElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92ACB18314EAB005B1EB1 /* FinalStateElementView.m */; };
+		970E44151964115000F7D53A /* ThreeWayRelationElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD718314EAB005B1EB1 /* ThreeWayRelationElementView.m */; };
+		970E44161964115000F7D53A /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AF618314F5A005B1EB1 /* Element.m */; };
+		970E44171964115000F7D53A /* TextElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD218314EAB005B1EB1 /* TextElementView.m */; };
+		970E44181964115000F7D53A /* ClassElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC518314EAB005B1EB1 /* ClassElementView.m */; };
+		970E44191964115000F7D53A /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E21831FE7D000F01A3 /* Grid.m */; };
+		970E441A1964115000F7D53A /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC418314EAB005B1EB1 /* Geometry.m */; };
+		970E441B1964115000F7D53A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8F31831FF85000F01A3 /* main.m */; };
+		970E441C1964115000F7D53A /* ElementViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92ACD18314EAB005B1EB1 /* ElementViewFactory.m */; };
+		970E441D1964115000F7D53A /* ElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC118314EAB005B1EB1 /* ElementView.m */; };
+		970E441E1964115000F7D53A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8D01831FD94000F01A3 /* SettingsTableViewController.m */; };
+		970E441F1964115000F7D53A /* GenericItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8C61831FD21000F01A3 /* GenericItemCollectionViewCell.m */; };
+		970E44201964115000F7D53A /* LocalRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AF918314F5A005B1EB1 /* LocalRepository.m */; };
+		970E44211964115000F7D53A /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8D31831FD94000F01A3 /* InfoViewController.m */; };
+		970E44221964115000F7D53A /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8E91831FF08000F01A3 /* CanvasView.m */; };
+		970E44231964115000F7D53A /* RelationElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC318314EAB005B1EB1 /* RelationElementView.m */; };
+		970E44241964115000F7D53A /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AFB18314F5A005B1EB1 /* Repository.m */; };
+		970E44251964115000F7D53A /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8D11831FD94000F01A3 /* Settings.m */; };
+		970E44261964115000F7D53A /* NoteElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD618314EAB005B1EB1 /* NoteElementView.m */; };
+		970E44271964115000F7D53A /* CanvasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8C51831FD21000F01A3 /* CanvasCollectionViewController.m */; };
+		970E44281964115000F7D53A /* CanvasItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8C31831FD21000F01A3 /* CanvasItemCollectionViewCell.m */; };
+		970E44291964115000F7D53A /* NSString+NSStringLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AC618314EAB005B1EB1 /* NSString+NSStringLib.m */; };
+		970E442A1964115000F7D53A /* FontGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B3E241862C7780004C5F1 /* FontGeometry.m */; };
+		970E442B1964115000F7D53A /* GroupItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8C41831FD21000F01A3 /* GroupItemCollectionViewCell.m */; };
+		970E442C1964115000F7D53A /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8EA1831FF08000F01A3 /* CanvasViewController.m */; };
+		970E442D1964115000F7D53A /* InterfaceElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD318314EAB005B1EB1 /* InterfaceElementView.m */; };
+		970E442E1964115000F7D53A /* ActorElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AD518314EAB005B1EB1 /* ActorElementView.m */; };
+		970E442F1964115000F7D53A /* InitialStateElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92ACC18314EAB005B1EB1 /* InitialStateElementView.m */; };
+		970E44301964115000F7D53A /* StateElementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92ACA18314EAB005B1EB1 /* StateElementView.m */; };
+		970E44311964115000F7D53A /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92B0318314FA6005B1EB1 /* SMXMLDocument.m */; };
+		970E44321964115000F7D53A /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F92AF518314F5A005B1EB1 /* Canvas.m */; };
+		970E44331964115000F7D53A /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9718FB011834A4A2005FD538 /* GridView.m */; };
+		970E44341964115000F7D53A /* UIViewController+BackgrounderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97FCF8DD1831FE10000F01A3 /* UIViewController+BackgrounderViewController.m */; };
+		970E44361964115000F7D53A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FCF91418329E21000F01A3 /* CoreText.framework */; };
+		970E44371964115000F7D53A /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979D9298186E25E50012B34F /* libTestFlight.a */; };
+		970E44381964115000F7D53A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 973D754617A813820030C2AD /* libz.dylib */; };
+		970E44391964115000F7D53A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
+		970E443A1964115000F7D53A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702756175FAFF500CFB4DC /* UIKit.framework */; };
+		970E443B1964115000F7D53A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702758175FAFF500CFB4DC /* Foundation.framework */; };
+		970E443C1964115000F7D53A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9770275A175FAFF500CFB4DC /* CoreGraphics.framework */; };
+		970E443E1964115000F7D53A /* NoPreview.xcf in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B101831510F005B1EB1 /* NoPreview.xcf */; };
+		970E443F1964115000F7D53A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 976634061963F57400C6DE20 /* iTunesArtwork.png */; };
+		970E44401964115000F7D53A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF911183201F1000F01A3 /* README.md */; };
+		970E44411964115000F7D53A /* LucidaGrande.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 979D92A2186E2DD60012B34F /* LucidaGrande.ttc */; };
+		970E44421964115000F7D53A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
+		970E44431964115000F7D53A /* Background-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA86F1833E519005CF9DC /* Background-Landscape@2x.png */; };
+		970E44441964115000F7D53A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9770275F175FAFF500CFB4DC /* InfoPlist.strings */; };
+		970E44451964115000F7D53A /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8D71831FD94000F01A3 /* settings.png */; };
+		970E44461964115000F7D53A /* iPad.Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97702771175FAFF500CFB4DC /* iPad.Storyboard.storyboard */; };
+		970E44471964115000F7D53A /* Background-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8671833E389005CF9DC /* Background-Portrait.png */; };
+		970E44481964115000F7D53A /* build.xml in Resources */ = {isa = PBXBuildFile; fileRef = 97AE8AA4183C901000ED4C02 /* build.xml */; };
+		970E44491964115000F7D53A /* Background-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8701833E519005CF9DC /* Background-Landscape.png */; };
+		970E444A1964115000F7D53A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF910183201F1000F01A3 /* LICENSE */; };
+		970E444B1964115000F7D53A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 976634071963F57400C6DE20 /* iTunesArtwork@2x.png */; };
+		970E444C1964115000F7D53A /* iPhone.Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E440A19640F2D00F7D53A /* iPhone.Storyboard.storyboard */; };
+		970E444D1964115000F7D53A /* Welcome.uxf in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B07183150BB005B1EB1 /* Welcome.uxf */; };
+		970E444E1964115000F7D53A /* NoPreview.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F92B121831514F005B1EB1 /* NoPreview.png */; };
+		970E444F1964115000F7D53A /* Background-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FEA8681833E389005CF9DC /* Background-Portrait@2x.png */; };
+		970E44501964115000F7D53A /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97FCF8D61831FD94000F01A3 /* settings@2x.png */; };
 		9718FB021834A4A2005FD538 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9718FB011834A4A2005FD538 /* GridView.m */; };
 		97296A351834300F00FBA1B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
 		9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
@@ -76,6 +142,9 @@
 /* Begin PBXFileReference section */
 		970286971839F1B4001689B9 /* Preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preview.h; path = Preview/Preview.h; sourceTree = "<group>"; };
 		970286981839F1B4001689B9 /* Preview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preview.m; path = Preview/Preview.m; sourceTree = "<group>"; };
+		970E440A19640F2D00F7D53A /* iPhone.Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.Storyboard.storyboard; path = Storyboards/iPhone.Storyboard.storyboard; sourceTree = "<group>"; };
+		970E44541964115000F7D53A /* Let's view UML copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's view UML copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		970E44551964115000F7D53A /* Let's view UML copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Let's view UML copy-Info.plist"; path = "/Users/nicolafiorillo/Projects/iOS/letsviewuml/Let's view UML copy-Info.plist"; sourceTree = "<absolute>"; };
 		9718FB001834A4A2005FD538 /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridView.h; path = CanvasView/GridView.h; sourceTree = "<group>"; };
 		9718FB011834A4A2005FD538 /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridView.m; path = CanvasView/GridView.m; sourceTree = "<group>"; };
 		97296A341834300F00FBA1B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -187,6 +256,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		970E44351964115000F7D53A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970E44361964115000F7D53A /* CoreText.framework in Frameworks */,
+				970E44371964115000F7D53A /* libTestFlight.a in Frameworks */,
+				970E44381964115000F7D53A /* libz.dylib in Frameworks */,
+				970E44391964115000F7D53A /* QuartzCore.framework in Frameworks */,
+				970E443A1964115000F7D53A /* UIKit.framework in Frameworks */,
+				970E443B1964115000F7D53A /* Foundation.framework in Frameworks */,
+				970E443C1964115000F7D53A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97702750175FAFF500CFB4DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +314,7 @@
 				97AE8AA4183C901000ED4C02 /* build.xml */,
 				97FCF910183201F1000F01A3 /* LICENSE */,
 				97FCF911183201F1000F01A3 /* README.md */,
+				970E44551964115000F7D53A /* Let's view UML copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				97702753175FAFF500CFB4DC /* Let's view UML.app */,
+				970E44541964115000F7D53A /* Let's view UML copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				97702771175FAFF500CFB4DC /* iPad.Storyboard.storyboard */,
+				970E440A19640F2D00F7D53A /* iPhone.Storyboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -444,6 +530,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		970E440C1964115000F7D53A /* Let's view UML-Distribution */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 970E44511964115000F7D53A /* Build configuration list for PBXNativeTarget "Let's view UML-Distribution" */;
+			buildPhases = (
+				970E440D1964115000F7D53A /* Sources */,
+				970E44351964115000F7D53A /* Frameworks */,
+				970E443D1964115000F7D53A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Let's view UML-Distribution";
+			productName = iUMLet;
+			productReference = 970E44541964115000F7D53A /* Let's view UML copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		97702752175FAFF500CFB4DC /* Let's view UML */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97702779175FAFF500CFB4DC /* Build configuration list for PBXNativeTarget "Let's view UML" */;
@@ -488,11 +591,38 @@
 			projectRoot = "";
 			targets = (
 				97702752175FAFF500CFB4DC /* Let's view UML */,
+				970E440C1964115000F7D53A /* Let's view UML-Distribution */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		970E443D1964115000F7D53A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970E443E1964115000F7D53A /* NoPreview.xcf in Resources */,
+				970E443F1964115000F7D53A /* iTunesArtwork.png in Resources */,
+				970E44401964115000F7D53A /* README.md in Resources */,
+				970E44411964115000F7D53A /* LucidaGrande.ttc in Resources */,
+				970E44421964115000F7D53A /* Media.xcassets in Resources */,
+				970E44431964115000F7D53A /* Background-Landscape@2x.png in Resources */,
+				970E44441964115000F7D53A /* InfoPlist.strings in Resources */,
+				970E44451964115000F7D53A /* settings.png in Resources */,
+				970E44461964115000F7D53A /* iPad.Storyboard.storyboard in Resources */,
+				970E44471964115000F7D53A /* Background-Portrait.png in Resources */,
+				970E44481964115000F7D53A /* build.xml in Resources */,
+				970E44491964115000F7D53A /* Background-Landscape.png in Resources */,
+				970E444A1964115000F7D53A /* LICENSE in Resources */,
+				970E444B1964115000F7D53A /* iTunesArtwork@2x.png in Resources */,
+				970E444C1964115000F7D53A /* iPhone.Storyboard.storyboard in Resources */,
+				970E444D1964115000F7D53A /* Welcome.uxf in Resources */,
+				970E444E1964115000F7D53A /* NoPreview.png in Resources */,
+				970E444F1964115000F7D53A /* Background-Portrait@2x.png in Resources */,
+				970E44501964115000F7D53A /* settings@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		97702751175FAFF500CFB4DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,6 +641,7 @@
 				97FEA8721833E519005CF9DC /* Background-Landscape.png in Resources */,
 				97FCF912183201F1000F01A3 /* LICENSE in Resources */,
 				976634091963F57400C6DE20 /* iTunesArtwork@2x.png in Resources */,
+				970E440B19640F2D00F7D53A /* iPhone.Storyboard.storyboard in Resources */,
 				97F92B0A183150BB005B1EB1 /* Welcome.uxf in Resources */,
 				97F92B131831514F005B1EB1 /* NoPreview.png in Resources */,
 				97FEA86A1833E389005CF9DC /* Background-Portrait@2x.png in Resources */,
@@ -521,6 +652,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		970E440D1964115000F7D53A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				970E440E1964115000F7D53A /* AppDelegate.m in Sources */,
+				970E440F1964115000F7D53A /* PackageElementView.m in Sources */,
+				970E44101964115000F7D53A /* Preview.m in Sources */,
+				970E44111964115000F7D53A /* TextLine.m in Sources */,
+				970E44121964115000F7D53A /* UseCaseElementView.m in Sources */,
+				970E44131964115000F7D53A /* CanvasLoader.m in Sources */,
+				970E44141964115000F7D53A /* FinalStateElementView.m in Sources */,
+				970E44151964115000F7D53A /* ThreeWayRelationElementView.m in Sources */,
+				970E44161964115000F7D53A /* Element.m in Sources */,
+				970E44171964115000F7D53A /* TextElementView.m in Sources */,
+				970E44181964115000F7D53A /* ClassElementView.m in Sources */,
+				970E44191964115000F7D53A /* Grid.m in Sources */,
+				970E441A1964115000F7D53A /* Geometry.m in Sources */,
+				970E441B1964115000F7D53A /* main.m in Sources */,
+				970E441C1964115000F7D53A /* ElementViewFactory.m in Sources */,
+				970E441D1964115000F7D53A /* ElementView.m in Sources */,
+				970E441E1964115000F7D53A /* SettingsTableViewController.m in Sources */,
+				970E441F1964115000F7D53A /* GenericItemCollectionViewCell.m in Sources */,
+				970E44201964115000F7D53A /* LocalRepository.m in Sources */,
+				970E44211964115000F7D53A /* InfoViewController.m in Sources */,
+				970E44221964115000F7D53A /* CanvasView.m in Sources */,
+				970E44231964115000F7D53A /* RelationElementView.m in Sources */,
+				970E44241964115000F7D53A /* Repository.m in Sources */,
+				970E44251964115000F7D53A /* Settings.m in Sources */,
+				970E44261964115000F7D53A /* NoteElementView.m in Sources */,
+				970E44271964115000F7D53A /* CanvasCollectionViewController.m in Sources */,
+				970E44281964115000F7D53A /* CanvasItemCollectionViewCell.m in Sources */,
+				970E44291964115000F7D53A /* NSString+NSStringLib.m in Sources */,
+				970E442A1964115000F7D53A /* FontGeometry.m in Sources */,
+				970E442B1964115000F7D53A /* GroupItemCollectionViewCell.m in Sources */,
+				970E442C1964115000F7D53A /* CanvasViewController.m in Sources */,
+				970E442D1964115000F7D53A /* InterfaceElementView.m in Sources */,
+				970E442E1964115000F7D53A /* ActorElementView.m in Sources */,
+				970E442F1964115000F7D53A /* InitialStateElementView.m in Sources */,
+				970E44301964115000F7D53A /* StateElementView.m in Sources */,
+				970E44311964115000F7D53A /* SMXMLDocument.m in Sources */,
+				970E44321964115000F7D53A /* Canvas.m in Sources */,
+				970E44331964115000F7D53A /* GridView.m in Sources */,
+				970E44341964115000F7D53A /* UIViewController+BackgrounderViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9770274F175FAFF500CFB4DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +766,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		970E44521964115000F7D53A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				CURRENT_PROJECT_VERSION = 8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
+				INFOPLIST_FILE = "Let's view UML copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/iUMLet",
+					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet,
+					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/TestFlight,
+				);
+				PRODUCT_NAME = "Let's view UML copy";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		970E44531964115000F7D53A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
+				INFOPLIST_FILE = "Let's view UML copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/iUMLet",
+					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet,
+					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/TestFlight,
+				);
+				PRODUCT_NAME = "Let's view UML copy";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		97702777175FAFF500CFB4DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -601,7 +831,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
@@ -617,10 +847,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -639,7 +869,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
@@ -648,10 +878,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -664,13 +894,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
 				CURRENT_PROJECT_VERSION = 8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
 				INFOPLIST_FILE = "iUMLet/Supporting Files/Let's view UML-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/iUMLet",
@@ -678,8 +908,8 @@
 					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/TestFlight,
 				);
 				PRODUCT_NAME = "Let's view UML";
-				PROVISIONING_PROFILE = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -690,14 +920,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nicola Fiorillo (DAKLZJ97S7)";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iUMLet/Supporting Files/Let's view UML-Prefix.pch";
 				INFOPLIST_FILE = "iUMLet/Supporting Files/Let's view UML-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/iUMLet",
@@ -705,8 +935,8 @@
 					/Users/nicolafiorillo/Projects/iOS/letsviewuml/iUMLet/TestFlight,
 				);
 				PRODUCT_NAME = "Let's view UML";
-				PROVISIONING_PROFILE = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B5B864B5-59F1-4AFA-B3D5-A39D81B774B1";
+				PROVISIONING_PROFILE = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "440438B3-DF3F-4BF0-9648-8880F0ADB171";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -715,6 +945,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		970E44511964115000F7D53A /* Build configuration list for PBXNativeTarget "Let's view UML-Distribution" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				970E44521964115000F7D53A /* Debug */,
+				970E44531964115000F7D53A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		9770274E175FAFF500CFB4DC /* Build configuration list for PBXProject "Let's view UML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

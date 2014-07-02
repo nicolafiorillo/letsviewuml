@@ -12,8 +12,8 @@
 		97296A351834300F00FBA1B6 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97296A341834300F00FBA1B6 /* Media.xcassets */; };
 		9736BFFA176C477A0041964B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9736BFF9176C477A0041964B /* QuartzCore.framework */; };
 		973D754717A813820030C2AD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 973D754617A813820030C2AD /* libz.dylib */; };
-		974C85C8185275A20084D114 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 974C85C6185275A20084D114 /* iTunesArtwork.png */; };
-		974C85C9185275A20084D114 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 974C85C7185275A20084D114 /* iTunesArtwork@2x.png */; };
+		976634081963F57400C6DE20 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 976634061963F57400C6DE20 /* iTunesArtwork.png */; };
+		976634091963F57400C6DE20 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 976634071963F57400C6DE20 /* iTunesArtwork@2x.png */; };
 		976B3E251862C7780004C5F1 /* FontGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 976B3E241862C7780004C5F1 /* FontGeometry.m */; };
 		97702757175FAFF500CFB4DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702756175FAFF500CFB4DC /* UIKit.framework */; };
 		97702759175FAFF500CFB4DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97702758175FAFF500CFB4DC /* Foundation.framework */; };
@@ -81,8 +81,8 @@
 		97296A341834300F00FBA1B6 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		9736BFF9176C477A0041964B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		973D754617A813820030C2AD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		974C85C6185275A20084D114 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		974C85C7185275A20084D114 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		976634061963F57400C6DE20 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		976634071963F57400C6DE20 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		976B3E231862C7780004C5F1 /* FontGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontGeometry.h; path = ElementsView/FontGeometry.h; sourceTree = "<group>"; };
 		976B3E241862C7780004C5F1 /* FontGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontGeometry.m; path = ElementsView/FontGeometry.m; sourceTree = "<group>"; };
 		97702753175FAFF500CFB4DC /* Let's view UML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's view UML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,8 +216,8 @@
 		976595F7184EFE6800ADA423 /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
-				974C85C6185275A20084D114 /* iTunesArtwork.png */,
-				974C85C7185275A20084D114 /* iTunesArtwork@2x.png */,
+				976634061963F57400C6DE20 /* iTunesArtwork.png */,
+				976634071963F57400C6DE20 /* iTunesArtwork@2x.png */,
 			);
 			name = iTunes;
 			sourceTree = "<group>";
@@ -498,19 +498,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				97F92B111831510F005B1EB1 /* NoPreview.xcf in Resources */,
+				976634081963F57400C6DE20 /* iTunesArtwork.png in Resources */,
 				97FCF913183201F1000F01A3 /* README.md in Resources */,
 				979D92A6186E2DD60012B34F /* LucidaGrande.ttc in Resources */,
 				97296A351834300F00FBA1B6 /* Media.xcassets in Resources */,
 				97FEA8711833E519005CF9DC /* Background-Landscape@2x.png in Resources */,
 				97702761175FAFF500CFB4DC /* InfoPlist.strings in Resources */,
-				974C85C8185275A20084D114 /* iTunesArtwork.png in Resources */,
 				97FCF8DC1831FD94000F01A3 /* settings.png in Resources */,
 				97702773175FAFF500CFB4DC /* iPad.Storyboard.storyboard in Resources */,
 				97FEA8691833E389005CF9DC /* Background-Portrait.png in Resources */,
 				97AE8AA5183C901000ED4C02 /* build.xml in Resources */,
 				97FEA8721833E519005CF9DC /* Background-Landscape.png in Resources */,
-				974C85C9185275A20084D114 /* iTunesArtwork@2x.png in Resources */,
 				97FCF912183201F1000F01A3 /* LICENSE in Resources */,
+				976634091963F57400C6DE20 /* iTunesArtwork@2x.png in Resources */,
 				97F92B0A183150BB005B1EB1 /* Welcome.uxf in Resources */,
 				97F92B131831514F005B1EB1 /* NoPreview.png in Resources */,
 				97FEA86A1833E389005CF9DC /* Background-Portrait@2x.png in Resources */,
